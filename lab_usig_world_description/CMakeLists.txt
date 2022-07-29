@@ -17,9 +17,11 @@ endif()
 
 # find dependencies
 find_package(ament_cmake REQUIRED)
+find_package(gazebo_ros REQUIRED)
 # uncomment the following section in order to fill in
 # further dependencies manually.
 # find_package(<dependency> REQUIRED)
+
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
@@ -32,9 +34,12 @@ if(BUILD_TESTING)
   ament_lint_auto_find_test_dependencies()
 endif()
 
+
 install(
-  DIRECTORY worlds
+  DIRECTORY models
   DESTINATION share/${PROJECT_NAME}
 )
+
+ament_environment_hooks("${CMAKE_CURRENT_SOURCE_DIR}/env-hooks/${PROJECT_NAME}.sh.in")
 
 ament_package()
