@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <model name="Ar Condicionado">
+    <static>true</static>
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+            <mesh>
+                <uri>model://ar_condicionado/meshes/ar_condicionado.stl</uri>
+                <scale>1 1 1</scale>
+            </mesh>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <uri>model://ar_condicionado/meshes/ar_condicionado.stl</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <gazebo reference="link">
+      <material>Gazebo/White</material>
+    </gazebo>
+  </model>
+</sdf>
