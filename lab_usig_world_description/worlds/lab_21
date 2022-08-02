@@ -3214,7 +3214,7 @@
         <collision name='collision'>
           <geometry>
             <mesh>
-              <uri>model://mmaquina_corte/meshes/maquina_corte.stl</uri>
+              <uri>model://maquina_corte/meshes/maquina_corte.stl</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
