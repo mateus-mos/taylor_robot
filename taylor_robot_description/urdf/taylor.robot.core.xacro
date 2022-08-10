@@ -2,50 +2,60 @@
 <!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
      Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
      For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
-<robot
-  name="taylor_description">
-  <link
-    name="base_link">
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="taylor_robot_description">
+
+
+  <link name="base_link"/>
+
+  <joint name="chassis_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="chassis_link"/>
+    <origin xyz="0 0.0 0.0"/>
+  </joint>
+
+  <link name="chassis_link">
     <inertial>
-      <origin
-        xyz="0.097174 0.025101 1.9337E-06"
-        rpy="0 0 0" />
-      <mass
-        value="0.65385" />
+      <origin xyz="0.097174 0.025101 1.9337E-06" rpy="0 0 0"/>
+
+      <mass value="0.65385" />
+
       <inertia
         ixx="0.002038"
         ixy="-4.4552E-05"
         ixz="-3.3397E-08"
         iyy="0.0059638"
         iyz="-1.9482E-08"
-        izz="0.0043786" />
+        izz="0.0043786"
+      />
+
     </inertial>
+
     <visual>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
+
       <geometry>
-        <mesh
-          filename="package://taylor_description/meshes/base_link.STL" />
+        <mesh>
+          <uri>model://taylor_robot_description/meshes/chassis_link.STL</uri>
+        </mesh>
       </geometry>
-      <material
-        name="">
-        <color
-          rgba="0.79216 0.81961 0.93333 1" />
+
+      <material name="">
+        <color rgba="0.79216 0.81961 0.93333 1" />
       </material>
+
     </visual>
+
     <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="package://taylor_description/meshes/base_link.STL" />
+        <mesh>
+         <uri>model://taylor_robot_description/meshes/chassis_link.STL</uri>
+        </mesh>
       </geometry>
     </collision>
   </link>
-  <link
-    name="right_wheel">
+
+  <link name="right_wheel">
     <inertial>
       <origin
         xyz="-0.0134995209094582 -2.03221668610353E-06 -3.11022023206695E-11"
@@ -65,8 +75,9 @@
         xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="package://taylor_description/meshes/right_wheel.STL" />
+        <mesh>
+          <uri>model://taylor_robot_description/meshes/right_wheel.STL</uri>
+        </mesh>
       </geometry>
       <material
         name="">
@@ -79,13 +90,13 @@
         xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="package://taylor_description/meshes/right_wheel.STL" />
+        <mesh>
+          <uri>model://taylor_robot_description/meshes/right_wheel.STL</uri>
+        </mesh>
       </geometry>
     </collision>
   </link>
-  <joint
-    name="right_wheel_joint"
+  <joint name="right_wheel_joint"
     type="continuous">
     <origin
       xyz="0 -0.069 0"
@@ -97,8 +108,7 @@
     <axis
       xyz="1 0 0" />
   </joint>
-  <link
-    name="left_wheel">
+  <link name="left_wheel">
     <inertial>
       <origin
         xyz="0.0125004790905418 -2.03221668610353E-06 -3.11022039365138E-11"
@@ -118,8 +128,9 @@
         xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="package://taylor_description/meshes/left_wheel.STL" />
+        <mesh>
+         <uri>model://taylor_robot_description/meshes/left_wheel.STL</uri>
+        </mesh>
       </geometry>
       <material
         name="">
@@ -132,13 +143,13 @@
         xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="package://taylor_description/meshes/left_wheel.STL" />
+        <mesh>
+          <uri>model://taylor_robot_description/meshes/left_wheel.STL</uri>
+        </mesh>
       </geometry>
     </collision>
   </link>
-  <joint
-    name="left_wheel_joint"
+  <joint name="left_wheel_joint"
     type="continuous">
     <origin
       xyz="0 0.069 0"
@@ -150,8 +161,7 @@
     <axis
       xyz="1 0 0" />
   </joint>
-  <link
-    name="caster_wheel">
+  <link name="caster_wheel">
     <inertial>
       <origin
         xyz="8.32667268468867E-17 -0.00982966964470464 -1.38777878078145E-17"
@@ -171,8 +181,9 @@
         xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="package://taylor_description/meshes/caster_wheel.STL" />
+        <mesh>
+          <uri>model://taylor_robot_description/meshes/caster_wheel.STL</uri>
+        </mesh>
       </geometry>
       <material
         name="">
@@ -185,26 +196,25 @@
         xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="package://taylor_description/meshes/caster_wheel.STL" />
+        <mesh>
+          <uri>model://taylor_robot_description/meshes/caster_wheel.STL</uri>
+        </mesh>
       </geometry>
     </collision>
   </link>
-  <joint
-    name="caster_wheel_joint"
+  <joint name="caster_wheel_joint"
     type="continuous">
     <origin
       xyz="0.17 0 -0.009"
       rpy="1.5708 0 -0.16473" />
     <parent
-      link="base_link" />
+      link="chassis_link" />
     <child
       link="caster_wheel" />
     <axis
       xyz="0 1 0" />
   </joint>
-  <link
-    name="lidar">
+  <link name="lidar">
     <inertial>
       <origin
         xyz="0 0 0"
@@ -224,8 +234,9 @@
         xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="package://taylor_description/meshes/lidar.STL" />
+        <mesh>
+          <uri>package://taylor_robot_description/meshes/lidar.STL</uri>
+        </mesh>
       </geometry>
       <material
         name="">
@@ -238,19 +249,19 @@
         xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="package://taylor_description/meshes/lidar.STL" />
+        <mesh>
+          <uri>package://taylor_robot_description/meshes/lidar.STL</uri>
+        </mesh>
       </geometry>
     </collision>
   </link>
-  <joint
-    name="lidar_joint"
+  <joint name="lidar_joint"
     type="fixed">
     <origin
       xyz="0.034828 0 0.0936"
       rpy="1.5708 0 0" />
     <parent
-      link="base_link" />
+      link="chassis_link" />
     <child
       link="lidar" />
     <axis
