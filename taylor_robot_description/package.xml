@@ -1,10 +1,10 @@
 <package format="2">
-  <name>Taylor_URDF_assembly</name>
+  <name>taylor_description</name>
   <version>1.0.0</version>
   <description>
-    <p>URDF Description package for Taylor_URDF_assembly</p>
+    <p>URDF Description package for taylor_description</p>
     <p>This package contains configuration data, 3D models and launch files
-for Taylor_URDF_assembly robot</p>
+for taylor_description robot</p>
   </description>
   <author>TODO</author>
   <maintainer email="TODO@email.com" />
