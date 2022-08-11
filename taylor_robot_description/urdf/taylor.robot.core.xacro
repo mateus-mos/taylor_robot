@@ -5,15 +5,7 @@
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="taylor_robot_description">
 
 
-  <link name="base_link"/>
-
-  <joint name="chassis_joint" type="fixed">
-    <parent link="base_link"/>
-    <child link="chassis_link"/>
-    <origin xyz="0 0.0 0.0"/>
-  </joint>
-
-  <link name="chassis_link">
+    <link name="chassis_link">
     <inertial>
       <origin xyz="0.097174 0.025101 1.9337E-06" rpy="0 0 0"/>
 
@@ -34,9 +26,7 @@
       <origin xyz="0 0 0" rpy="0 0 0" />
 
       <geometry>
-        <mesh>
-          <uri>model://taylor_robot_description/meshes/chassis_link.STL</uri>
-        </mesh>
+        <mesh filename="file://$(find taylor_robot_description)/meshes/chassis_link.STL" scale="1 1 1" />
       </geometry>
 
       <material name="">
@@ -48,9 +38,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh>
-         <uri>model://taylor_robot_description/meshes/chassis_link.STL</uri>
-        </mesh>
+        <mesh filename="file://$(find taylor_robot_description)/meshes/chassis_link.STL" scale="1 1 1" />
       </geometry>
     </collision>
   </link>
@@ -75,9 +63,7 @@
         xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
-        <mesh>
-          <uri>model://taylor_robot_description/meshes/right_wheel.STL</uri>
-        </mesh>
+        <mesh filename="file://$(find taylor_robot_description)/meshes/right_wheel.STL" scale="1 1 1" />
       </geometry>
       <material
         name="">
@@ -90,9 +76,7 @@
         xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
-        <mesh>
-          <uri>model://taylor_robot_description/meshes/right_wheel.STL</uri>
-        </mesh>
+        <mesh filename="file://$(find taylor_robot_description)/meshes/right_wheel.STL" scale="1 1 1" />
       </geometry>
     </collision>
   </link>
@@ -102,7 +86,7 @@
       xyz="0 -0.069 0"
       rpy="1.5708 0 1.5708" />
     <parent
-      link="base_link" />
+      link="chassis_link" />
     <child
       link="right_wheel" />
     <axis
@@ -128,9 +112,7 @@
         xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
-        <mesh>
-         <uri>model://taylor_robot_description/meshes/left_wheel.STL</uri>
-        </mesh>
+        <mesh filename="file://$(find taylor_robot_description)/meshes/left_wheel.STL" scale="1 1 1" />
       </geometry>
       <material
         name="">
@@ -143,9 +125,7 @@
         xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
-        <mesh>
-          <uri>model://taylor_robot_description/meshes/left_wheel.STL</uri>
-        </mesh>
+        <mesh filename="file://$(find taylor_robot_description)/meshes/left_wheel.STL" scale="1 1 1" />
       </geometry>
     </collision>
   </link>
@@ -155,7 +135,7 @@
       xyz="0 0.069 0"
       rpy="1.5708 0 1.5708" />
     <parent
-      link="base_link" />
+      link="chassis_link" />
     <child
       link="left_wheel" />
     <axis
@@ -181,9 +161,7 @@
         xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
-        <mesh>
-          <uri>model://taylor_robot_description/meshes/caster_wheel.STL</uri>
-        </mesh>
+        <mesh filename="file://$(find taylor_robot_description)/meshes/caster_wheel.STL" scale="1 1 1" />
       </geometry>
       <material
         name="">
@@ -196,14 +174,12 @@
         xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
-        <mesh>
-          <uri>model://taylor_robot_description/meshes/caster_wheel.STL</uri>
-        </mesh>
+        <mesh filename="file://$(find taylor_robot_description)/meshes/caster_wheel.STL" scale="1 1 1" />
       </geometry>
     </collision>
   </link>
   <joint name="caster_wheel_joint"
-    type="continuous">
+    type="fixed">
     <origin
       xyz="0.17 0 -0.009"
       rpy="1.5708 0 -0.16473" />
@@ -234,9 +210,7 @@
         xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
-        <mesh>
-          <uri>package://taylor_robot_description/meshes/lidar.STL</uri>
-        </mesh>
+        <mesh filename="file://$(find taylor_robot_description)/meshes/lidar.STL" scale="1 1 1" />
       </geometry>
       <material
         name="">
@@ -249,9 +223,7 @@
         xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
-        <mesh>
-          <uri>package://taylor_robot_description/meshes/lidar.STL</uri>
-        </mesh>
+        <mesh filename="file://$(find taylor_robot_description)/meshes/lidar.STL" scale="1 1 1" />
       </geometry>
     </collision>
   </link>
@@ -267,4 +239,26 @@
     <axis
       xyz="0 0 0" />
   </joint>
+
+  <gazebo reference="caster_wheel">
+    <mu1 value="0.001"/>
+    <mu2 value="0.001"/>
+  </gazebo>
+
+  <gazebo reference="right_wheel">
+    <material>Gazebo/Black</material>
+  </gazebo>
+
+  <gazebo reference="left_wheel">
+    <material>Gazebo/Black</material>
+  </gazebo>
+
+  <gazebo reference="lidar">
+    <material>Gazebo/Black</material>
+  </gazebo>
+
+  <gazebo reference="chassis_link">
+    <material>Gazebo/Purple</material>
+  </gazebo>
+
 </robot>
