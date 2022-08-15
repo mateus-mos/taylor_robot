@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="taylor_robot">
+
+  <xacro:include filename="taylor.robot.core.xacro"/>
+  <xacro:include filename="gazebo_control.xacro"/>
+
+</robot>
