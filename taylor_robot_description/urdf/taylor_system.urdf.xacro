@@ -26,7 +26,6 @@ https://github.com/ros-simulation/gazebo_ros_demos/blob/kinetic-devel/diffbot_de
   <xacro:include filename="$(find taylor_robot_description)/ros2_control/taylor_system.ros2_control.xacro" />
 
 
-
   <xacro:taylor_system
     name="TaylorSystem" prefix="$(arg prefix)"
     use_fake_hardware="$(arg use_fake_hardware)"
