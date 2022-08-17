@@ -36,7 +36,7 @@ endif()
 
 
 install(
-  DIRECTORY models
+  DIRECTORY worlds 
   DESTINATION share/${PROJECT_NAME}
 )
 

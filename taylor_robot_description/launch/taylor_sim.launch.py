@@ -20,8 +20,12 @@ def generate_launch_description():
 
     package_name='taylor_robot_description' 
 
+    # GAZEBO WORLD
+    world_description_package='lab_usig_world_description' 
+    world_name='lab_25'
+
     world_path = PathJoinSubstitution(
-        [FindPackageShare(package_name), "worlds", "lab6"]
+        [FindPackageShare(world_description_package), "worlds", world_name]
     )
 
     #rviz_config_path = PathJoinSubstitution(
