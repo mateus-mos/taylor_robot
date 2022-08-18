@@ -23,7 +23,6 @@ def generate_launch_description():
     # GAZEBO WORLD
     world_description_package='lab_usig_world_description' 
     world_name='lab_25'
-
     world_path = PathJoinSubstitution(
         [FindPackageShare(world_description_package), "worlds", world_name]
     )
@@ -31,6 +30,7 @@ def generate_launch_description():
     #rviz_config_path = PathJoinSubstitution(
     #    [FindPackageShare(package_name), "rviz", "my_bot.rviz"]
     #)
+    #
 
     rsp = IncludeLaunchDescription(
                 PythonLaunchDescriptionSource([os.path.join(

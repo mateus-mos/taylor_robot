@@ -33,7 +33,7 @@ if(BUILD_TESTING)
 endif()
 
 install(
-	DIRECTORY config launch meshes urdf worlds gazebo ros2_control
+	DIRECTORY config launch meshes urdf worlds gazebo ros2_control rviz2
 	DESTINATION share/${PROJECT_NAME}
 )
 
