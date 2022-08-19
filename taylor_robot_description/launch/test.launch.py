@@ -184,8 +184,9 @@ def generate_launch_description():
     #Spawn entity
     spawn_entity = Node(package='gazebo_ros', 
                         executable='spawn_entity.py',
-                        arguments=['-topic', 'robot_description','-entity', 'taylor_robot'],
-                        output='screen')
+                        arguments=['-topic', 'robot_description','-entity', 'taylor_robot','-x','12','-y','10'],
+                        output='screen'
+                        )
 
     # Launch RViz
     start_rviz_cmd = Node(

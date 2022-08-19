@@ -259,7 +259,7 @@
   </gazebo>
 
   <gazebo reference="chassis_link">
-    <material>Gazebo/Purple</material>
+    <material>Gazebo/Red</material>
   </gazebo>
 </xacro:macro>
 

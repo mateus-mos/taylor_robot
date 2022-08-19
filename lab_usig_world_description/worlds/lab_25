@@ -3205,7 +3205,7 @@
         <collision name='collision'>
           <geometry>
             <mesh>
-              <uri>model://mmaquina_corte/meshes/maquina_corte.stl</uri>
+              <uri>model://maquina_corte/meshes/maquina_corte.stl</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -3359,47 +3359,6 @@
         <kinematic>0</kinematic>
       </link>
       <pose>22.3965 11.0016 0 0 -0 0</pose>
-      <gazebo reference='link'>
-        <material>Gazebo/White</material>
-      </gazebo>
-    </model>
-    <model name='Fox'>
-      <static>1</static>
-      <link name='link'>
-        <collision name='collision'>
-          <geometry>
-            <mesh>
-              <uri>model://fox/meshes/fox.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
-          </geometry>
-          <max_contacts>10</max_contacts>
-          <surface>
-            <contact>
-              <ode/>
-            </contact>
-            <bounce/>
-            <friction>
-              <torsional>
-                <ode/>
-              </torsional>
-              <ode/>
-            </friction>
-          </surface>
-        </collision>
-        <visual name='visual'>
-          <geometry>
-            <mesh>
-              <uri>model://fox/meshes/fox.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
-          </geometry>
-        </visual>
-        <self_collide>0</self_collide>
-        <enable_wind>0</enable_wind>
-        <kinematic>0</kinematic>
-      </link>
-      <pose>40.9589 4.62872 0 0 -0 0</pose>
       <gazebo reference='link'>
         <material>Gazebo/White</material>
       </gazebo>
