@@ -3,6 +3,7 @@
 
   <xacro:arg name="prefix" default=""/>
 
+  <xacro:include filename="$(find taylor_robot)/gazebo/gazebo_control.xacro"/>
   <xacro:include filename="$(find taylor_robot)/gazebo/taylor.materials.xacro"/>
   <xacro:include filename="$(find taylor_robot)/urdf/taylor.lidar.xacro"/>
   <xacro:include filename="$(find taylor_robot)/urdf/taylor.robot.core.xacro"/>
