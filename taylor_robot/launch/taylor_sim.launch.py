@@ -18,7 +18,7 @@ from launch_ros.substitutions import FindPackageShare
 
 def generate_launch_description():
 
-    package_name='taylor_robot_description' 
+    package_name='taylor_robot' 
 
     # GAZEBO WORLD
     world_description_package='lab_usig_world_description' 

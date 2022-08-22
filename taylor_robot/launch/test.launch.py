@@ -19,8 +19,8 @@ def generate_launch_description():
 
     # Set the path to different files and folders.
     pkg_gazebo_ros = FindPackageShare(package='gazebo_ros').find('gazebo_ros')  
-    #pkg_share = FindPackageShare(package='taylor_robot_description').find('taylor_robot_description')
-    pkg_share = os.path.join(get_package_share_directory('taylor_robot_description'))
+    #pkg_share = FindPackageShare(package='taylor_robot').find('taylor_robot')
+    pkg_share = os.path.join(get_package_share_directory('taylor_robot'))
     default_launch_dir = os.path.join(pkg_share, 'launch')
     default_model_path = os.path.join(pkg_share, 'urdf', 'taylor.robot.urdf.xacro')
     
