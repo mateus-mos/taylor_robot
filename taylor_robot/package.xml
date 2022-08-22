@@ -9,11 +9,17 @@
 
   <buildtool_depend>ament_cmake</buildtool_depend>
 
-  <test_depend>ament_lint_auto</test_depend>
-  <test_depend>ament_lint_common</test_depend>
-  <test_depend>rviz</test_depend>
-  <test_depend>joint_state_publisher_gui</test_depend>
-  <test_depend>gazebo</test_depend>
+
+  <depend>ament_lint_auto</depend>
+  <depend>ament_lint_common</depend>
+  <depend>rviz</depend>
+  <depend>joint_state_publisher_gui</depend>
+  <depend>gazebo</depend>
+
+  <depend>hardware_interface</depend>
+  <depend>pluginlib</depend>
+  <depend>rclcpp</depend>
+  <depend>rclcpp_lifecycle</depend>
 
   <export>
     <build_type>ament_cmake</build_type>
