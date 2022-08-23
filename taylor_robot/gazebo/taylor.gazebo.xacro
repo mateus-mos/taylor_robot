@@ -20,7 +20,13 @@
     </gazebo>
 
     <gazebo reference="chassis_link">
-        <material>Gazebo/Purple</material>
+        <material>Gazebo/White</material>
+    </gazebo>
+
+    <gazebo reference="caster_wheel">
+        <material>Gazebo/Black</material>
+        <mu0 value="0.001"/>
+        <mu1 value="0.001"/>
     </gazebo>
 
 </robot>
