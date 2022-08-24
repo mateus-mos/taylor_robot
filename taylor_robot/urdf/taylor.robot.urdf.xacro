@@ -7,6 +7,7 @@
   <xacro:include filename="$(find taylor_robot)/urdf/taylor.lidar.xacro"/>
   <xacro:include filename="$(find taylor_robot)/urdf/taylor.robot.core.xacro"/>
   <xacro:include filename="$(find taylor_robot)/ros2_control/taylor.ros2_control.xacro"/>
+  
 
   <xacro:taylor prefix="$(arg prefix)"/>
 
