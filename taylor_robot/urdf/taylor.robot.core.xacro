@@ -9,7 +9,7 @@
     <link name="base_footprint"/>
 
 
-    <link name="chassis_link">
+    <link name="base_link">
     <inertial>
       <origin xyz="0.097174 0.025101 1.9337E-06" rpy="0 0 0"/>
 
@@ -30,7 +30,7 @@
       <origin xyz="0 0 0" rpy="0 0 0" />
 
       <geometry>
-        <mesh filename="file://$(find taylor_robot)/meshes/chassis_link.STL" scale="1 1 1" />
+        <mesh filename="file://$(find taylor_robot)/meshes/base_link.STL" scale="1 1 1" />
       </geometry>
 
       <material name="">
@@ -42,13 +42,13 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="file://$(find taylor_robot)/meshes/chassis_link.STL" scale="1 1 1" />
+        <mesh filename="file://$(find taylor_robot)/meshes/base_link.STL" scale="1 1 1" />
       </geometry>
     </collision>
   </link>
 
   <joint name="base_joint" type="fixed">
-      <parent link="chassis_link"/>
+      <parent link="base_link"/>
       <child link="base_footprint"/>
       <origin xyz="0 0 0" rpy="0 0 0"/>
   </joint>
@@ -96,7 +96,7 @@
       xyz="0 -0.069 0"
       rpy="1.5708 0 1.5708" />
     <parent
-      link="chassis_link" />
+      link="base_link" />
     <child
       link="right_wheel" />
     <axis
@@ -145,7 +145,7 @@
       xyz="0 0.069 0"
       rpy="1.5708 0 1.5708" />
     <parent
-      link="chassis_link" />
+      link="base_link" />
     <child
       link="left_wheel" />
     <axis
@@ -194,7 +194,7 @@
       xyz="0.17 0 -0.009"
       rpy="1.5708 0 -0.16473" />
     <parent
-      link="chassis_link" />
+      link="base_link" />
     <child
       link="caster_wheel" />
     <axis
@@ -243,7 +243,7 @@
       xyz="0.034828 0 0.0936"
       rpy="1.5708 0 0" />
     <parent
-      link="chassis_link" />
+      link="base_link" />
     <child
       link="lidar" />
     <axis

@@ -19,7 +19,7 @@
         <material>Gazebo/Black</material>
     </gazebo>
 
-    <gazebo reference="chassis_link">
+    <gazebo reference="base_link">
         <material>Gazebo/White</material>
     </gazebo>
 

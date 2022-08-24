@@ -51,7 +51,7 @@ Visualization Manager:
         All Enabled: true
         caster_wheel:
           Value: true
-        chassis_link:
+        base_link:
           Value: true
         laser_frame:
           Value: true
@@ -74,7 +74,7 @@ Visualization Manager:
         map:
           {}
         odom:
-          chassis_link:
+          base_link:
             caster_wheel:
               {}
             left_wheel:
@@ -109,7 +109,7 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
-        chassis_link:
+        base_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -284,7 +284,7 @@ Visualization Manager:
       Name: Current View
       Near Clip Distance: 0.009999999776482582
       Pitch: 0.7147961258888245
-      Target Frame: chassis_link
+      Target Frame: base_link
       Value: ThirdPersonFollower (rviz_default_plugins)
       Yaw: 3.2553961277008057
     Saved: ~
