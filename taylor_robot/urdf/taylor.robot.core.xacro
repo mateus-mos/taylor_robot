@@ -6,15 +6,29 @@
 
   <xacro:macro name="taylor" params="prefix">
 
+    <link name="base_link"/>
     <link name="base_footprint"/>
 
+    <joint name="base_joint" type="fixed">
+        <parent link="base_link"/>
+        <child link="base_footprint"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+    </joint>
 
-    <link name="base_link">
+
+    <!-- CHASSIS LINK -->
+
+    <joint name="chassis_joint" type="fixed">
+        <parent link="base_link"/>
+        <child link="chassis_link"/>
+        <origin xyz="0.0 0.0 0.0"/>
+    </joint>
+
+
+    <link name="chassis_link">
     <inertial>
       <origin xyz="0.097174 0.025101 1.9337E-06" rpy="0 0 0"/>
-
       <mass value="0.65385" />
-
       <inertia
         ixx="0.002038"
         ixy="-4.4552E-05"
@@ -23,17 +37,14 @@
         iyz="-1.9482E-08"
         izz="0.0043786"
       />
-
     </inertial>
 
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="file://$(find taylor_robot)/meshes/base_link.STL" scale="1 1 1" />
+        <mesh filename="file://$(find taylor_robot)/meshes/chassis_link.STL" scale="1 1 1" />
       </geometry>
-      <material name="">
-        <color rgba="0.79216 0.81961 0.93333 1" />
-      </material>
+      <material name="red"/>
     </visual>
 
     <collision>
@@ -41,15 +52,8 @@
       <geometry>
         <mesh filename="file://$(find taylor_robot)/meshes/base_link.STL" scale="1 1 1" />
       </geometry>
-    </collision>
-    
+    </collision> 
   </link>
-
-  <joint name="base_joint" type="fixed">
-      <parent link="base_link"/>
-      <child link="base_footprint"/>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-  </joint>
   
   <link name="right_wheel">
     <inertial>
@@ -73,11 +77,7 @@
       <geometry>
         <mesh filename="file://$(find taylor_robot)/meshes/right_wheel.STL" scale="1 1 1" />
       </geometry>
-      <material
-        name="">
-        <color
-          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
-      </material>
+      <material name="black"/>
     </visual>
     <collision>
       <origin
@@ -88,6 +88,7 @@
       </geometry>
     </collision>
   </link>
+
   <joint name="right_wheel_joint"
     type="continuous">
     <origin
@@ -100,6 +101,7 @@
     <axis
       xyz="1 0 0" />
   </joint>
+
   <link name="left_wheel">
     <inertial>
       <origin
@@ -122,11 +124,7 @@
       <geometry>
         <mesh filename="file://$(find taylor_robot)/meshes/left_wheel.STL" scale="1 1 1" />
       </geometry>
-      <material
-        name="">
-        <color
-          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
-      </material>
+      <material name="black"/>
     </visual>
     <collision>
       <origin
@@ -137,6 +135,7 @@
       </geometry>
     </collision>
   </link>
+
   <joint name="left_wheel_joint"
     type="continuous">
     <origin
@@ -149,6 +148,7 @@
     <axis
       xyz="1 0 0" />
   </joint>
+
   <link name="caster_wheel">
     <inertial>
       <origin
@@ -171,11 +171,8 @@
       <geometry>
         <mesh filename="file://$(find taylor_robot)/meshes/caster_wheel.STL" scale="1 1 1" />
       </geometry>
-      <material
-        name="">
-        <color
-          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
-      </material>
+      <material name="black"/>
+
     </visual>
     <collision>
       <origin
@@ -186,6 +183,7 @@
       </geometry>
     </collision>
   </link>
+
   <joint name="caster_wheel_joint"
     type="fixed">
     <origin
@@ -198,6 +196,7 @@
     <axis
       xyz="0 1 0" />
   </joint>
+
   <link name="lidar">
     <inertial>
       <origin
@@ -220,11 +219,7 @@
       <geometry>
         <mesh filename="file://$(find taylor_robot)/meshes/lidar.STL" scale="1 1 1" />
       </geometry>
-      <material
-        name="">
-        <color
-          rgba="1 1 1 1" />
-      </material>
+      <material name="black"/>
     </visual>
     <collision>
       <origin
@@ -235,6 +230,7 @@
       </geometry>
     </collision>
   </link>
+
   <joint name="lidar_joint"
     type="fixed">
     <origin
