@@ -1,0 +1,258 @@
+[0.172s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.172s] DEBUG:colcon:Parsed command line arguments: Namespace(allow_overriding=[], ament_cmake_args=None, base_paths=['.'], build_base='build', catkin_cmake_args=None, catkin_skip_building_tests=False, cmake_args=None, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, cmake_target=None, cmake_target_skip_unavailable=False, continue_on_error=False, event_handlers=None, executor='parallel', ignore_user_meta=False, install_base='install', log_base=None, log_level=None, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7fb70dbc6b50>>, merge_install=False, metas=['./colcon.meta'], packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_end=None, packages_ignore=None, packages_ignore_regex=None, packages_select=None, packages_select_build_failed=False, packages_select_by_dep=None, packages_select_regex=None, packages_select_test_failures=False, packages_skip=None, packages_skip_build_finished=False, packages_skip_by_dep=None, packages_skip_regex=None, packages_skip_test_passed=False, packages_skip_up_to=None, packages_start=None, packages_up_to=None, packages_up_to_regex=None, parallel_workers=8, paths=None, symlink_install=False, test_result_base=None, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7fb70dbc6b50>, verb_name='build', verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7fb70dbd3100>)
+[0.204s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.204s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.204s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.204s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.204s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.204s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.204s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/instaufpr/taylor_ws/src'
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.217s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.217s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.217s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.218s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.218s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.218s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.218s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.218s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.218s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.218s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.218s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.218s] Level 1:colcon.colcon_core.package_identification:_identify(lab_usig_world_description) by extensions ['ignore', 'ignore_ament_install']
+[0.218s] Level 1:colcon.colcon_core.package_identification:_identify(lab_usig_world_description) by extension 'ignore'
+[0.218s] Level 1:colcon.colcon_core.package_identification:_identify(lab_usig_world_description) by extension 'ignore_ament_install'
+[0.218s] Level 1:colcon.colcon_core.package_identification:_identify(lab_usig_world_description) by extensions ['colcon_pkg']
+[0.218s] Level 1:colcon.colcon_core.package_identification:_identify(lab_usig_world_description) by extension 'colcon_pkg'
+[0.218s] Level 1:colcon.colcon_core.package_identification:_identify(lab_usig_world_description) by extensions ['colcon_meta']
+[0.218s] Level 1:colcon.colcon_core.package_identification:_identify(lab_usig_world_description) by extension 'colcon_meta'
+[0.218s] Level 1:colcon.colcon_core.package_identification:_identify(lab_usig_world_description) by extensions ['ros']
+[0.218s] Level 1:colcon.colcon_core.package_identification:_identify(lab_usig_world_description) by extension 'ros'
+[0.221s] DEBUG:colcon.colcon_core.package_identification:Package 'lab_usig_world_description' with type 'ros.ament_cmake' and name 'lab_usig_world_description'
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_mapping) by extensions ['ignore', 'ignore_ament_install']
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_mapping) by extension 'ignore'
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_mapping) by extension 'ignore_ament_install'
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_mapping) by extensions ['colcon_pkg']
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_mapping) by extension 'colcon_pkg'
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_mapping) by extensions ['colcon_meta']
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_mapping) by extension 'colcon_meta'
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_mapping) by extensions ['ros']
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_mapping) by extension 'ros'
+[0.222s] DEBUG:colcon.colcon_core.package_identification:Package 'ros2_mapping' with type 'ros.ament_cmake' and name 'ros2_mapping'
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(taylor_robot) by extensions ['ignore', 'ignore_ament_install']
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(taylor_robot) by extension 'ignore'
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(taylor_robot) by extension 'ignore_ament_install'
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(taylor_robot) by extensions ['colcon_pkg']
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(taylor_robot) by extension 'colcon_pkg'
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(taylor_robot) by extensions ['colcon_meta']
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(taylor_robot) by extension 'colcon_meta'
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(taylor_robot) by extensions ['ros']
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(taylor_robot) by extension 'ros'
+[0.224s] DEBUG:colcon.colcon_core.package_identification:Package 'taylor_robot' with type 'ros.ament_cmake' and name 'taylor_robot'
+[0.224s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.224s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.224s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.224s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.224s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.244s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.244s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.248s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 4 installed packages in /home/instaufpr/taylor_ws/install
+[0.249s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 31 installed packages in /home/instaufpr/nav2_ws/install
+[0.250s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 1 installed packages in /home/instaufpr/robot_1/install
+[0.250s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 5 installed packages in /home/instaufpr/udemy_ros2/install
+[0.251s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 316 installed packages in /opt/ros/foxy
+[0.254s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.408s] Level 5:colcon.colcon_core.verb:set package 'lab_usig_world_description' build argument 'cmake_args' from command line to 'None'
+[0.408s] Level 5:colcon.colcon_core.verb:set package 'lab_usig_world_description' build argument 'cmake_target' from command line to 'None'
+[0.408s] Level 5:colcon.colcon_core.verb:set package 'lab_usig_world_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.408s] Level 5:colcon.colcon_core.verb:set package 'lab_usig_world_description' build argument 'cmake_clean_cache' from command line to 'False'
+[0.408s] Level 5:colcon.colcon_core.verb:set package 'lab_usig_world_description' build argument 'cmake_clean_first' from command line to 'False'
+[0.408s] Level 5:colcon.colcon_core.verb:set package 'lab_usig_world_description' build argument 'cmake_force_configure' from command line to 'False'
+[0.408s] Level 5:colcon.colcon_core.verb:set package 'lab_usig_world_description' build argument 'ament_cmake_args' from command line to 'None'
+[0.408s] Level 5:colcon.colcon_core.verb:set package 'lab_usig_world_description' build argument 'catkin_cmake_args' from command line to 'None'
+[0.408s] Level 5:colcon.colcon_core.verb:set package 'lab_usig_world_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.408s] DEBUG:colcon.colcon_core.verb:Building package 'lab_usig_world_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/instaufpr/taylor_ws/src/build/lab_usig_world_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/instaufpr/taylor_ws/src/install/lab_usig_world_description', 'merge_install': False, 'path': '/home/instaufpr/taylor_ws/src/lab_usig_world_description', 'symlink_install': False, 'test_result_base': None}
+[0.409s] Level 5:colcon.colcon_core.verb:set package 'ros2_mapping' build argument 'cmake_args' from command line to 'None'
+[0.409s] Level 5:colcon.colcon_core.verb:set package 'ros2_mapping' build argument 'cmake_target' from command line to 'None'
+[0.409s] Level 5:colcon.colcon_core.verb:set package 'ros2_mapping' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.409s] Level 5:colcon.colcon_core.verb:set package 'ros2_mapping' build argument 'cmake_clean_cache' from command line to 'False'
+[0.409s] Level 5:colcon.colcon_core.verb:set package 'ros2_mapping' build argument 'cmake_clean_first' from command line to 'False'
+[0.409s] Level 5:colcon.colcon_core.verb:set package 'ros2_mapping' build argument 'cmake_force_configure' from command line to 'False'
+[0.409s] Level 5:colcon.colcon_core.verb:set package 'ros2_mapping' build argument 'ament_cmake_args' from command line to 'None'
+[0.409s] Level 5:colcon.colcon_core.verb:set package 'ros2_mapping' build argument 'catkin_cmake_args' from command line to 'None'
+[0.409s] Level 5:colcon.colcon_core.verb:set package 'ros2_mapping' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.409s] DEBUG:colcon.colcon_core.verb:Building package 'ros2_mapping' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/instaufpr/taylor_ws/src/build/ros2_mapping', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/instaufpr/taylor_ws/src/install/ros2_mapping', 'merge_install': False, 'path': '/home/instaufpr/taylor_ws/src/ros2_mapping', 'symlink_install': False, 'test_result_base': None}
+[0.410s] Level 5:colcon.colcon_core.verb:set package 'taylor_robot' build argument 'cmake_args' from command line to 'None'
+[0.410s] Level 5:colcon.colcon_core.verb:set package 'taylor_robot' build argument 'cmake_target' from command line to 'None'
+[0.410s] Level 5:colcon.colcon_core.verb:set package 'taylor_robot' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.410s] Level 5:colcon.colcon_core.verb:set package 'taylor_robot' build argument 'cmake_clean_cache' from command line to 'False'
+[0.410s] Level 5:colcon.colcon_core.verb:set package 'taylor_robot' build argument 'cmake_clean_first' from command line to 'False'
+[0.410s] Level 5:colcon.colcon_core.verb:set package 'taylor_robot' build argument 'cmake_force_configure' from command line to 'False'
+[0.410s] Level 5:colcon.colcon_core.verb:set package 'taylor_robot' build argument 'ament_cmake_args' from command line to 'None'
+[0.410s] Level 5:colcon.colcon_core.verb:set package 'taylor_robot' build argument 'catkin_cmake_args' from command line to 'None'
+[0.410s] Level 5:colcon.colcon_core.verb:set package 'taylor_robot' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.410s] DEBUG:colcon.colcon_core.verb:Building package 'taylor_robot' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/instaufpr/taylor_ws/src/build/taylor_robot', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/instaufpr/taylor_ws/src/install/taylor_robot', 'merge_install': False, 'path': '/home/instaufpr/taylor_ws/src/taylor_robot', 'symlink_install': False, 'test_result_base': None}
+[0.410s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.411s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.412s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/instaufpr/taylor_ws/src/lab_usig_world_description' with build type 'ament_cmake'
+[0.412s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/instaufpr/taylor_ws/src/lab_usig_world_description'
+[0.417s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.417s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.417s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.423s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/instaufpr/taylor_ws/src/ros2_mapping' with build type 'ament_cmake'
+[0.423s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/instaufpr/taylor_ws/src/ros2_mapping'
+[0.424s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.424s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.430s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/instaufpr/taylor_ws/src/taylor_robot' with build type 'ament_cmake'
+[0.430s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/instaufpr/taylor_ws/src/taylor_robot'
+[0.431s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.431s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.440s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/instaufpr/taylor_ws/src/build/lab_usig_world_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/instaufpr/udemy_ros2/install/turtlesim_catch_them_all:/home/instaufpr/udemy_ros2/install/my_py_pkg:/home/instaufpr/nav2_ws/install/nav2_gazebo_spawner:/opt/ros/foxy /usr/bin/cmake /home/instaufpr/taylor_ws/src/lab_usig_world_description -DCMAKE_INSTALL_PREFIX=/home/instaufpr/taylor_ws/src/install/lab_usig_world_description
+[0.448s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/instaufpr/taylor_ws/src/build/ros2_mapping': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/instaufpr/udemy_ros2/install/turtlesim_catch_them_all:/home/instaufpr/udemy_ros2/install/my_py_pkg:/home/instaufpr/nav2_ws/install/nav2_gazebo_spawner:/opt/ros/foxy /usr/bin/cmake /home/instaufpr/taylor_ws/src/ros2_mapping -DCMAKE_INSTALL_PREFIX=/home/instaufpr/taylor_ws/src/install/ros2_mapping
+[0.456s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/instaufpr/taylor_ws/src/build/taylor_robot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/instaufpr/udemy_ros2/install/turtlesim_catch_them_all:/home/instaufpr/udemy_ros2/install/my_py_pkg:/home/instaufpr/nav2_ws/install/nav2_gazebo_spawner:/opt/ros/foxy /usr/bin/cmake /home/instaufpr/taylor_ws/src/taylor_robot -DCMAKE_INSTALL_PREFIX=/home/instaufpr/taylor_ws/src/install/taylor_robot
+[1.431s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/instaufpr/taylor_ws/src/build/taylor_robot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/instaufpr/udemy_ros2/install/turtlesim_catch_them_all:/home/instaufpr/udemy_ros2/install/my_py_pkg:/home/instaufpr/nav2_ws/install/nav2_gazebo_spawner:/opt/ros/foxy /usr/bin/cmake /home/instaufpr/taylor_ws/src/taylor_robot -DCMAKE_INSTALL_PREFIX=/home/instaufpr/taylor_ws/src/install/taylor_robot
+[1.434s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/instaufpr/taylor_ws/src/build/taylor_robot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/instaufpr/udemy_ros2/install/turtlesim_catch_them_all:/home/instaufpr/udemy_ros2/install/my_py_pkg:/home/instaufpr/nav2_ws/install/nav2_gazebo_spawner:/opt/ros/foxy /usr/bin/cmake --build /home/instaufpr/taylor_ws/src/build/taylor_robot -- -j8 -l8
+[1.476s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/instaufpr/taylor_ws/src/build/ros2_mapping' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/instaufpr/udemy_ros2/install/turtlesim_catch_them_all:/home/instaufpr/udemy_ros2/install/my_py_pkg:/home/instaufpr/nav2_ws/install/nav2_gazebo_spawner:/opt/ros/foxy /usr/bin/cmake /home/instaufpr/taylor_ws/src/ros2_mapping -DCMAKE_INSTALL_PREFIX=/home/instaufpr/taylor_ws/src/install/ros2_mapping
+[1.478s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/instaufpr/taylor_ws/src/build/ros2_mapping': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/instaufpr/udemy_ros2/install/turtlesim_catch_them_all:/home/instaufpr/udemy_ros2/install/my_py_pkg:/home/instaufpr/nav2_ws/install/nav2_gazebo_spawner:/opt/ros/foxy /usr/bin/cmake --build /home/instaufpr/taylor_ws/src/build/ros2_mapping -- -j8 -l8
+[1.484s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/instaufpr/taylor_ws/src/build/taylor_robot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/instaufpr/udemy_ros2/install/turtlesim_catch_them_all:/home/instaufpr/udemy_ros2/install/my_py_pkg:/home/instaufpr/nav2_ws/install/nav2_gazebo_spawner:/opt/ros/foxy /usr/bin/cmake --build /home/instaufpr/taylor_ws/src/build/taylor_robot -- -j8 -l8
+[1.521s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/instaufpr/taylor_ws/src/build/taylor_robot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/instaufpr/udemy_ros2/install/turtlesim_catch_them_all:/home/instaufpr/udemy_ros2/install/my_py_pkg:/home/instaufpr/nav2_ws/install/nav2_gazebo_spawner:/opt/ros/foxy /usr/bin/cmake --install /home/instaufpr/taylor_ws/src/build/taylor_robot
+[1.523s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/instaufpr/taylor_ws/src/build/ros2_mapping' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/instaufpr/udemy_ros2/install/turtlesim_catch_them_all:/home/instaufpr/udemy_ros2/install/my_py_pkg:/home/instaufpr/nav2_ws/install/nav2_gazebo_spawner:/opt/ros/foxy /usr/bin/cmake --build /home/instaufpr/taylor_ws/src/build/ros2_mapping -- -j8 -l8
+[1.544s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(taylor_robot)
+[1.545s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/instaufpr/taylor_ws/src/build/taylor_robot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/instaufpr/udemy_ros2/install/turtlesim_catch_them_all:/home/instaufpr/udemy_ros2/install/my_py_pkg:/home/instaufpr/nav2_ws/install/nav2_gazebo_spawner:/opt/ros/foxy /usr/bin/cmake --install /home/instaufpr/taylor_ws/src/build/taylor_robot
+[1.552s] Level 1:colcon.colcon_core.environment:checking '/home/instaufpr/taylor_ws/src/install/taylor_robot' for CMake module files
+[1.553s] Level 1:colcon.colcon_core.environment:checking '/home/instaufpr/taylor_ws/src/install/taylor_robot' for CMake config files
+[1.553s] Level 1:colcon.colcon_core.shell:create_environment_hook('taylor_robot', 'cmake_prefix_path')
+[1.554s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/instaufpr/taylor_ws/src/install/taylor_robot/share/taylor_robot/hook/cmake_prefix_path.ps1'
+[1.554s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/instaufpr/taylor_ws/src/install/taylor_robot/share/taylor_robot/hook/cmake_prefix_path.dsv'
+[1.555s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/instaufpr/taylor_ws/src/install/taylor_robot/share/taylor_robot/hook/cmake_prefix_path.sh'
+[1.556s] Level 1:colcon.colcon_core.environment:checking '/home/instaufpr/taylor_ws/src/install/taylor_robot/bin'
+[1.556s] Level 1:colcon.colcon_core.environment:checking '/home/instaufpr/taylor_ws/src/install/taylor_robot/lib/pkgconfig/taylor_robot.pc'
+[1.556s] Level 1:colcon.colcon_core.environment:checking '/home/instaufpr/taylor_ws/src/install/taylor_robot/lib/python3.8/site-packages'
+[1.556s] Level 1:colcon.colcon_core.environment:checking '/home/instaufpr/taylor_ws/src/install/taylor_robot/bin'
+[1.557s] INFO:colcon.colcon_core.shell:Creating package script '/home/instaufpr/taylor_ws/src/install/taylor_robot/share/taylor_robot/package.ps1'
+[1.558s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/instaufpr/taylor_ws/src/install/taylor_robot/share/taylor_robot/package.dsv'
+[1.558s] INFO:colcon.colcon_core.shell:Creating package script '/home/instaufpr/taylor_ws/src/install/taylor_robot/share/taylor_robot/package.sh'
+[1.559s] INFO:colcon.colcon_core.shell:Creating package script '/home/instaufpr/taylor_ws/src/install/taylor_robot/share/taylor_robot/package.bash'
+[1.560s] INFO:colcon.colcon_core.shell:Creating package script '/home/instaufpr/taylor_ws/src/install/taylor_robot/share/taylor_robot/package.zsh'
+[1.561s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/instaufpr/taylor_ws/src/install/taylor_robot/share/colcon-core/packages/taylor_robot)
+[1.566s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/instaufpr/taylor_ws/src/build/ros2_mapping': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/instaufpr/udemy_ros2/install/turtlesim_catch_them_all:/home/instaufpr/udemy_ros2/install/my_py_pkg:/home/instaufpr/nav2_ws/install/nav2_gazebo_spawner:/opt/ros/foxy /usr/bin/cmake --install /home/instaufpr/taylor_ws/src/build/ros2_mapping
+[1.579s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ros2_mapping)
+[1.580s] Level 1:colcon.colcon_core.environment:checking '/home/instaufpr/taylor_ws/src/install/ros2_mapping' for CMake module files
+[1.580s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/instaufpr/taylor_ws/src/build/ros2_mapping' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/instaufpr/udemy_ros2/install/turtlesim_catch_them_all:/home/instaufpr/udemy_ros2/install/my_py_pkg:/home/instaufpr/nav2_ws/install/nav2_gazebo_spawner:/opt/ros/foxy /usr/bin/cmake --install /home/instaufpr/taylor_ws/src/build/ros2_mapping
+[1.581s] Level 1:colcon.colcon_core.environment:checking '/home/instaufpr/taylor_ws/src/install/ros2_mapping' for CMake config files
+[1.581s] Level 1:colcon.colcon_core.shell:create_environment_hook('ros2_mapping', 'cmake_prefix_path')
+[1.582s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/instaufpr/taylor_ws/src/install/ros2_mapping/share/ros2_mapping/hook/cmake_prefix_path.ps1'
+[1.582s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/instaufpr/taylor_ws/src/install/ros2_mapping/share/ros2_mapping/hook/cmake_prefix_path.dsv'
+[1.583s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/instaufpr/taylor_ws/src/install/ros2_mapping/share/ros2_mapping/hook/cmake_prefix_path.sh'
+[1.583s] Level 1:colcon.colcon_core.environment:checking '/home/instaufpr/taylor_ws/src/install/ros2_mapping/bin'
+[1.583s] Level 1:colcon.colcon_core.environment:checking '/home/instaufpr/taylor_ws/src/install/ros2_mapping/lib/pkgconfig/ros2_mapping.pc'
+[1.584s] Level 1:colcon.colcon_core.environment:checking '/home/instaufpr/taylor_ws/src/install/ros2_mapping/lib/python3.8/site-packages'
+[1.584s] Level 1:colcon.colcon_core.environment:checking '/home/instaufpr/taylor_ws/src/install/ros2_mapping/bin'
+[1.585s] INFO:colcon.colcon_core.shell:Creating package script '/home/instaufpr/taylor_ws/src/install/ros2_mapping/share/ros2_mapping/package.ps1'
+[1.585s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/instaufpr/taylor_ws/src/install/ros2_mapping/share/ros2_mapping/package.dsv'
+[1.586s] INFO:colcon.colcon_core.shell:Creating package script '/home/instaufpr/taylor_ws/src/install/ros2_mapping/share/ros2_mapping/package.sh'
+[1.586s] INFO:colcon.colcon_core.shell:Creating package script '/home/instaufpr/taylor_ws/src/install/ros2_mapping/share/ros2_mapping/package.bash'
+[1.587s] INFO:colcon.colcon_core.shell:Creating package script '/home/instaufpr/taylor_ws/src/install/ros2_mapping/share/ros2_mapping/package.zsh'
+[1.587s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/instaufpr/taylor_ws/src/install/ros2_mapping/share/colcon-core/packages/ros2_mapping)
+[1.592s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(taylor_robot)
+[1.593s] Level 1:colcon.colcon_core.environment:checking '/home/instaufpr/taylor_ws/src/install/taylor_robot' for CMake module files
+[1.594s] Level 1:colcon.colcon_core.environment:checking '/home/instaufpr/taylor_ws/src/install/taylor_robot' for CMake config files
+[1.594s] Level 1:colcon.colcon_core.shell:create_environment_hook('taylor_robot', 'cmake_prefix_path')
+[1.594s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/instaufpr/taylor_ws/src/install/taylor_robot/share/taylor_robot/hook/cmake_prefix_path.ps1'
+[1.595s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/instaufpr/taylor_ws/src/install/taylor_robot/share/taylor_robot/hook/cmake_prefix_path.dsv'
+[1.595s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/instaufpr/taylor_ws/src/install/taylor_robot/share/taylor_robot/hook/cmake_prefix_path.sh'
+[1.596s] Level 1:colcon.colcon_core.environment:checking '/home/instaufpr/taylor_ws/src/install/taylor_robot/bin'
+[1.596s] Level 1:colcon.colcon_core.environment:checking '/home/instaufpr/taylor_ws/src/install/taylor_robot/lib/pkgconfig/taylor_robot.pc'
+[1.596s] Level 1:colcon.colcon_core.environment:checking '/home/instaufpr/taylor_ws/src/install/taylor_robot/lib/python3.8/site-packages'
+[1.596s] Level 1:colcon.colcon_core.environment:checking '/home/instaufpr/taylor_ws/src/install/taylor_robot/bin'
+[1.597s] INFO:colcon.colcon_core.shell:Creating package script '/home/instaufpr/taylor_ws/src/install/taylor_robot/share/taylor_robot/package.ps1'
+[1.597s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/instaufpr/taylor_ws/src/install/taylor_robot/share/taylor_robot/package.dsv'
+[1.597s] INFO:colcon.colcon_core.shell:Creating package script '/home/instaufpr/taylor_ws/src/install/taylor_robot/share/taylor_robot/package.sh'
+[1.598s] INFO:colcon.colcon_core.shell:Creating package script '/home/instaufpr/taylor_ws/src/install/taylor_robot/share/taylor_robot/package.bash'
+[1.598s] INFO:colcon.colcon_core.shell:Creating package script '/home/instaufpr/taylor_ws/src/install/taylor_robot/share/taylor_robot/package.zsh'
+[1.599s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/instaufpr/taylor_ws/src/install/taylor_robot/share/colcon-core/packages/taylor_robot)
+[1.617s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ros2_mapping)
+[1.617s] Level 1:colcon.colcon_core.environment:checking '/home/instaufpr/taylor_ws/src/install/ros2_mapping' for CMake module files
+[1.618s] Level 1:colcon.colcon_core.environment:checking '/home/instaufpr/taylor_ws/src/install/ros2_mapping' for CMake config files
+[1.618s] Level 1:colcon.colcon_core.shell:create_environment_hook('ros2_mapping', 'cmake_prefix_path')
+[1.618s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/instaufpr/taylor_ws/src/install/ros2_mapping/share/ros2_mapping/hook/cmake_prefix_path.ps1'
+[1.619s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/instaufpr/taylor_ws/src/install/ros2_mapping/share/ros2_mapping/hook/cmake_prefix_path.dsv'
+[1.619s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/instaufpr/taylor_ws/src/install/ros2_mapping/share/ros2_mapping/hook/cmake_prefix_path.sh'
+[1.620s] Level 1:colcon.colcon_core.environment:checking '/home/instaufpr/taylor_ws/src/install/ros2_mapping/bin'
+[1.620s] Level 1:colcon.colcon_core.environment:checking '/home/instaufpr/taylor_ws/src/install/ros2_mapping/lib/pkgconfig/ros2_mapping.pc'
+[1.620s] Level 1:colcon.colcon_core.environment:checking '/home/instaufpr/taylor_ws/src/install/ros2_mapping/lib/python3.8/site-packages'
+[1.620s] Level 1:colcon.colcon_core.environment:checking '/home/instaufpr/taylor_ws/src/install/ros2_mapping/bin'
+[1.621s] INFO:colcon.colcon_core.shell:Creating package script '/home/instaufpr/taylor_ws/src/install/ros2_mapping/share/ros2_mapping/package.ps1'
+[1.621s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/instaufpr/taylor_ws/src/install/ros2_mapping/share/ros2_mapping/package.dsv'
+[1.621s] INFO:colcon.colcon_core.shell:Creating package script '/home/instaufpr/taylor_ws/src/install/ros2_mapping/share/ros2_mapping/package.sh'
+[1.622s] INFO:colcon.colcon_core.shell:Creating package script '/home/instaufpr/taylor_ws/src/install/ros2_mapping/share/ros2_mapping/package.bash'
+[1.622s] INFO:colcon.colcon_core.shell:Creating package script '/home/instaufpr/taylor_ws/src/install/ros2_mapping/share/ros2_mapping/package.zsh'
+[1.622s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/instaufpr/taylor_ws/src/install/ros2_mapping/share/colcon-core/packages/ros2_mapping)
+[3.591s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/instaufpr/taylor_ws/src/build/lab_usig_world_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/instaufpr/udemy_ros2/install/turtlesim_catch_them_all:/home/instaufpr/udemy_ros2/install/my_py_pkg:/home/instaufpr/nav2_ws/install/nav2_gazebo_spawner:/opt/ros/foxy /usr/bin/cmake /home/instaufpr/taylor_ws/src/lab_usig_world_description -DCMAKE_INSTALL_PREFIX=/home/instaufpr/taylor_ws/src/install/lab_usig_world_description
+[3.592s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/instaufpr/taylor_ws/src/build/lab_usig_world_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/instaufpr/udemy_ros2/install/turtlesim_catch_them_all:/home/instaufpr/udemy_ros2/install/my_py_pkg:/home/instaufpr/nav2_ws/install/nav2_gazebo_spawner:/opt/ros/foxy /usr/bin/cmake --build /home/instaufpr/taylor_ws/src/build/lab_usig_world_description -- -j8 -l8
+[3.638s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/instaufpr/taylor_ws/src/build/lab_usig_world_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/instaufpr/udemy_ros2/install/turtlesim_catch_them_all:/home/instaufpr/udemy_ros2/install/my_py_pkg:/home/instaufpr/nav2_ws/install/nav2_gazebo_spawner:/opt/ros/foxy /usr/bin/cmake --build /home/instaufpr/taylor_ws/src/build/lab_usig_world_description -- -j8 -l8
+[3.664s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/instaufpr/taylor_ws/src/build/lab_usig_world_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/instaufpr/udemy_ros2/install/turtlesim_catch_them_all:/home/instaufpr/udemy_ros2/install/my_py_pkg:/home/instaufpr/nav2_ws/install/nav2_gazebo_spawner:/opt/ros/foxy /usr/bin/cmake --install /home/instaufpr/taylor_ws/src/build/lab_usig_world_description
+[3.783s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(lab_usig_world_description)
+[3.783s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/instaufpr/taylor_ws/src/build/lab_usig_world_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/instaufpr/udemy_ros2/install/turtlesim_catch_them_all:/home/instaufpr/udemy_ros2/install/my_py_pkg:/home/instaufpr/nav2_ws/install/nav2_gazebo_spawner:/opt/ros/foxy /usr/bin/cmake --install /home/instaufpr/taylor_ws/src/build/lab_usig_world_description
+[3.784s] Level 1:colcon.colcon_core.environment:checking '/home/instaufpr/taylor_ws/src/install/lab_usig_world_description' for CMake module files
+[3.785s] Level 1:colcon.colcon_core.environment:checking '/home/instaufpr/taylor_ws/src/install/lab_usig_world_description' for CMake config files
+[3.785s] Level 1:colcon.colcon_core.shell:create_environment_hook('lab_usig_world_description', 'cmake_prefix_path')
+[3.785s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/instaufpr/taylor_ws/src/install/lab_usig_world_description/share/lab_usig_world_description/hook/cmake_prefix_path.ps1'
+[3.786s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/instaufpr/taylor_ws/src/install/lab_usig_world_description/share/lab_usig_world_description/hook/cmake_prefix_path.dsv'
+[3.786s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/instaufpr/taylor_ws/src/install/lab_usig_world_description/share/lab_usig_world_description/hook/cmake_prefix_path.sh'
+[3.786s] Level 1:colcon.colcon_core.environment:checking '/home/instaufpr/taylor_ws/src/install/lab_usig_world_description/bin'
+[3.787s] Level 1:colcon.colcon_core.environment:checking '/home/instaufpr/taylor_ws/src/install/lab_usig_world_description/lib/pkgconfig/lab_usig_world_description.pc'
+[3.787s] Level 1:colcon.colcon_core.environment:checking '/home/instaufpr/taylor_ws/src/install/lab_usig_world_description/lib/python3.8/site-packages'
+[3.787s] Level 1:colcon.colcon_core.environment:checking '/home/instaufpr/taylor_ws/src/install/lab_usig_world_description/bin'
+[3.787s] INFO:colcon.colcon_core.shell:Creating package script '/home/instaufpr/taylor_ws/src/install/lab_usig_world_description/share/lab_usig_world_description/package.ps1'
+[3.788s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/instaufpr/taylor_ws/src/install/lab_usig_world_description/share/lab_usig_world_description/package.dsv'
+[3.788s] INFO:colcon.colcon_core.shell:Creating package script '/home/instaufpr/taylor_ws/src/install/lab_usig_world_description/share/lab_usig_world_description/package.sh'
+[3.788s] INFO:colcon.colcon_core.shell:Creating package script '/home/instaufpr/taylor_ws/src/install/lab_usig_world_description/share/lab_usig_world_description/package.bash'
+[3.789s] INFO:colcon.colcon_core.shell:Creating package script '/home/instaufpr/taylor_ws/src/install/lab_usig_world_description/share/lab_usig_world_description/package.zsh'
+[3.789s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/instaufpr/taylor_ws/src/install/lab_usig_world_description/share/colcon-core/packages/lab_usig_world_description)
+[3.814s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(lab_usig_world_description)
+[3.815s] Level 1:colcon.colcon_core.environment:checking '/home/instaufpr/taylor_ws/src/install/lab_usig_world_description' for CMake module files
+[3.816s] Level 1:colcon.colcon_core.environment:checking '/home/instaufpr/taylor_ws/src/install/lab_usig_world_description' for CMake config files
+[3.816s] Level 1:colcon.colcon_core.shell:create_environment_hook('lab_usig_world_description', 'cmake_prefix_path')
+[3.816s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/instaufpr/taylor_ws/src/install/lab_usig_world_description/share/lab_usig_world_description/hook/cmake_prefix_path.ps1'
+[3.817s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/instaufpr/taylor_ws/src/install/lab_usig_world_description/share/lab_usig_world_description/hook/cmake_prefix_path.dsv'
+[3.817s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/instaufpr/taylor_ws/src/install/lab_usig_world_description/share/lab_usig_world_description/hook/cmake_prefix_path.sh'
+[3.818s] Level 1:colcon.colcon_core.environment:checking '/home/instaufpr/taylor_ws/src/install/lab_usig_world_description/bin'
+[3.818s] Level 1:colcon.colcon_core.environment:checking '/home/instaufpr/taylor_ws/src/install/lab_usig_world_description/lib/pkgconfig/lab_usig_world_description.pc'
+[3.818s] Level 1:colcon.colcon_core.environment:checking '/home/instaufpr/taylor_ws/src/install/lab_usig_world_description/lib/python3.8/site-packages'
+[3.818s] Level 1:colcon.colcon_core.environment:checking '/home/instaufpr/taylor_ws/src/install/lab_usig_world_description/bin'
+[3.819s] INFO:colcon.colcon_core.shell:Creating package script '/home/instaufpr/taylor_ws/src/install/lab_usig_world_description/share/lab_usig_world_description/package.ps1'
+[3.819s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/instaufpr/taylor_ws/src/install/lab_usig_world_description/share/lab_usig_world_description/package.dsv'
+[3.819s] INFO:colcon.colcon_core.shell:Creating package script '/home/instaufpr/taylor_ws/src/install/lab_usig_world_description/share/lab_usig_world_description/package.sh'
+[3.820s] INFO:colcon.colcon_core.shell:Creating package script '/home/instaufpr/taylor_ws/src/install/lab_usig_world_description/share/lab_usig_world_description/package.bash'
+[3.820s] INFO:colcon.colcon_core.shell:Creating package script '/home/instaufpr/taylor_ws/src/install/lab_usig_world_description/share/lab_usig_world_description/package.zsh'
+[3.820s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/instaufpr/taylor_ws/src/install/lab_usig_world_description/share/colcon-core/packages/lab_usig_world_description)
+[3.821s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[3.821s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[3.821s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[3.821s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[3.829s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[3.829s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[3.829s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[3.840s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[3.841s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/instaufpr/taylor_ws/src/install/local_setup.ps1'
+[3.842s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/instaufpr/taylor_ws/src/install/_local_setup_util_ps1.py'
+[3.844s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/instaufpr/taylor_ws/src/install/setup.ps1'
+[3.847s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/instaufpr/taylor_ws/src/install/local_setup.sh'
+[3.848s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/instaufpr/taylor_ws/src/install/_local_setup_util_sh.py'
+[3.848s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/instaufpr/taylor_ws/src/install/setup.sh'
+[3.851s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/instaufpr/taylor_ws/src/install/local_setup.bash'
+[3.852s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/instaufpr/taylor_ws/src/install/setup.bash'
+[3.854s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/instaufpr/taylor_ws/src/install/local_setup.zsh'
+[3.855s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/instaufpr/taylor_ws/src/install/setup.zsh'

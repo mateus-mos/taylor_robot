@@ -1,0 +1,80 @@
+[0.025s] Invoking command in '/home/instaufpr/taylor_ws/src/build/taylor_robot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/instaufpr/udemy_ros2/install/turtlesim_catch_them_all:/home/instaufpr/udemy_ros2/install/my_py_pkg:/home/instaufpr/nav2_ws/install/nav2_gazebo_spawner:/opt/ros/foxy /usr/bin/cmake /home/instaufpr/taylor_ws/src/taylor_robot -DCMAKE_INSTALL_PREFIX=/home/instaufpr/taylor_ws/src/install/taylor_robot
+[0.137s] -- The C compiler identification is GNU 9.4.0
+[0.265s] -- The CXX compiler identification is GNU 9.4.0
+[0.273s] -- Check for working C compiler: /usr/bin/cc
+[0.346s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.347s] -- Detecting C compiler ABI info
+[0.425s] -- Detecting C compiler ABI info - done
+[0.439s] -- Detecting C compile features
+[0.439s] -- Detecting C compile features - done
+[0.442s] -- Check for working CXX compiler: /usr/bin/c++
+[0.527s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.528s] -- Detecting CXX compiler ABI info
+[0.627s] -- Detecting CXX compiler ABI info - done
+[0.642s] -- Detecting CXX compile features
+[0.642s] -- Detecting CXX compile features - done
+[0.649s] -- Found ament_cmake: 0.9.9 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.687s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.687s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.929s] -- Found ament_lint_auto: 0.9.6 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[0.996s] -- Configuring done
+[0.997s] -- Generating done
+[0.998s] -- Build files have been written to: /home/instaufpr/taylor_ws/src/build/taylor_robot
+[1.000s] Invoked command in '/home/instaufpr/taylor_ws/src/build/taylor_robot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/instaufpr/udemy_ros2/install/turtlesim_catch_them_all:/home/instaufpr/udemy_ros2/install/my_py_pkg:/home/instaufpr/nav2_ws/install/nav2_gazebo_spawner:/opt/ros/foxy /usr/bin/cmake /home/instaufpr/taylor_ws/src/taylor_robot -DCMAKE_INSTALL_PREFIX=/home/instaufpr/taylor_ws/src/install/taylor_robot
+[1.003s] Invoking command in '/home/instaufpr/taylor_ws/src/build/taylor_robot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/instaufpr/udemy_ros2/install/turtlesim_catch_them_all:/home/instaufpr/udemy_ros2/install/my_py_pkg:/home/instaufpr/nav2_ws/install/nav2_gazebo_spawner:/opt/ros/foxy /usr/bin/cmake --build /home/instaufpr/taylor_ws/src/build/taylor_robot -- -j8 -l8
+[1.053s] Invoked command in '/home/instaufpr/taylor_ws/src/build/taylor_robot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/instaufpr/udemy_ros2/install/turtlesim_catch_them_all:/home/instaufpr/udemy_ros2/install/my_py_pkg:/home/instaufpr/nav2_ws/install/nav2_gazebo_spawner:/opt/ros/foxy /usr/bin/cmake --build /home/instaufpr/taylor_ws/src/build/taylor_robot -- -j8 -l8
+[1.090s] Invoking command in '/home/instaufpr/taylor_ws/src/build/taylor_robot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/instaufpr/udemy_ros2/install/turtlesim_catch_them_all:/home/instaufpr/udemy_ros2/install/my_py_pkg:/home/instaufpr/nav2_ws/install/nav2_gazebo_spawner:/opt/ros/foxy /usr/bin/cmake --install /home/instaufpr/taylor_ws/src/build/taylor_robot
+[1.100s] -- Install configuration: ""
+[1.100s] -- Installing: /home/instaufpr/taylor_ws/src/install/taylor_robot/share/taylor_robot/config
+[1.101s] -- Installing: /home/instaufpr/taylor_ws/src/install/taylor_robot/share/taylor_robot/config/joint_names_Taylor_URDF_assembly.yaml
+[1.101s] -- Installing: /home/instaufpr/taylor_ws/src/install/taylor_robot/share/taylor_robot/launch
+[1.101s] -- Installing: /home/instaufpr/taylor_ws/src/install/taylor_robot/share/taylor_robot/launch/taylor.launch.py
+[1.101s] -- Installing: /home/instaufpr/taylor_ws/src/install/taylor_robot/share/taylor_robot/launch/test.launch.py
+[1.101s] -- Installing: /home/instaufpr/taylor_ws/src/install/taylor_robot/share/taylor_robot/launch/taylor_sim.launch.py
+[1.101s] -- Installing: /home/instaufpr/taylor_ws/src/install/taylor_robot/share/taylor_robot/meshes
+[1.101s] -- Installing: /home/instaufpr/taylor_ws/src/install/taylor_robot/share/taylor_robot/meshes/caster_wheel.STL
+[1.101s] -- Installing: /home/instaufpr/taylor_ws/src/install/taylor_robot/share/taylor_robot/meshes/lidar.STL
+[1.102s] -- Installing: /home/instaufpr/taylor_ws/src/install/taylor_robot/share/taylor_robot/meshes/right_wheel.STL
+[1.103s] -- Installing: /home/instaufpr/taylor_ws/src/install/taylor_robot/share/taylor_robot/meshes/left_wheel.STL
+[1.104s] -- Installing: /home/instaufpr/taylor_ws/src/install/taylor_robot/share/taylor_robot/meshes/chassis_link.STL
+[1.104s] -- Installing: /home/instaufpr/taylor_ws/src/install/taylor_robot/share/taylor_robot/urdf
+[1.104s] -- Installing: /home/instaufpr/taylor_ws/src/install/taylor_robot/share/taylor_robot/urdf/taylor.robot.urdf.xacro
+[1.105s] -- Installing: /home/instaufpr/taylor_ws/src/install/taylor_robot/share/taylor_robot/urdf/taylor_system.urdf.xacro
+[1.105s] -- Installing: /home/instaufpr/taylor_ws/src/install/taylor_robot/share/taylor_robot/urdf/taylor.robot.urdf copy.xacro
+[1.105s] -- Installing: /home/instaufpr/taylor_ws/src/install/taylor_robot/share/taylor_robot/urdf/taylor.lidar.xacro
+[1.105s] -- Installing: /home/instaufpr/taylor_ws/src/install/taylor_robot/share/taylor_robot/urdf/taylor.robot.core.xacro
+[1.105s] -- Installing: /home/instaufpr/taylor_ws/src/install/taylor_robot/share/taylor_robot/worlds
+[1.105s] -- Installing: /home/instaufpr/taylor_ws/src/install/taylor_robot/share/taylor_robot/worlds/lab_6
+[1.106s] -- Installing: /home/instaufpr/taylor_ws/src/install/taylor_robot/share/taylor_robot/gazebo
+[1.106s] -- Installing: /home/instaufpr/taylor_ws/src/install/taylor_robot/share/taylor_robot/gazebo/taylor.gazebo.xacro
+[1.106s] -- Installing: /home/instaufpr/taylor_ws/src/install/taylor_robot/share/taylor_robot/gazebo/gazebo_control.xacro
+[1.106s] -- Installing: /home/instaufpr/taylor_ws/src/install/taylor_robot/share/taylor_robot/gazebo/taylor.materials.xacro
+[1.106s] -- Installing: /home/instaufpr/taylor_ws/src/install/taylor_robot/share/taylor_robot/ros2_control
+[1.106s] -- Installing: /home/instaufpr/taylor_ws/src/install/taylor_robot/share/taylor_robot/ros2_control/taylor.ros2_control.xacro
+[1.106s] -- Installing: /home/instaufpr/taylor_ws/src/install/taylor_robot/share/taylor_robot/ros2_control/taylor_system.ros2_control.xacro
+[1.107s] -- Installing: /home/instaufpr/taylor_ws/src/install/taylor_robot/share/taylor_robot/ros2_control/hardware
+[1.107s] -- Installing: /home/instaufpr/taylor_ws/src/install/taylor_robot/share/taylor_robot/ros2_control/hardware/taylor_system.cpp
+[1.107s] -- Installing: /home/instaufpr/taylor_ws/src/install/taylor_robot/share/taylor_robot/ros2_control/hardware/include
+[1.107s] -- Installing: /home/instaufpr/taylor_ws/src/install/taylor_robot/share/taylor_robot/ros2_control/hardware/include/taylor_system.hpp
+[1.107s] -- Installing: /home/instaufpr/taylor_ws/src/install/taylor_robot/share/taylor_robot/rviz2
+[1.107s] -- Installing: /home/instaufpr/taylor_ws/src/install/taylor_robot/share/taylor_robot/rviz2/taylor_rviz2_config.rviz
+[1.108s] -- Installing: /home/instaufpr/taylor_ws/src/install/taylor_robot/share/taylor_robot/rviz2_map
+[1.108s] -- Installing: /home/instaufpr/taylor_ws/src/install/taylor_robot/share/taylor_robot/rviz2_map/lab_usig_map_rviz2.yaml
+[1.108s] -- Installing: /home/instaufpr/taylor_ws/src/install/taylor_robot/share/taylor_robot/rviz2_map/lab_usig_map_rviz2.pgm
+[1.108s] -- Installing: /home/instaufpr/taylor_ws/src/install/taylor_robot/share/taylor_robot/environment/taylor_robot.sh
+[1.108s] -- Installing: /home/instaufpr/taylor_ws/src/install/taylor_robot/share/ament_index/resource_index/package_run_dependencies/taylor_robot
+[1.108s] -- Installing: /home/instaufpr/taylor_ws/src/install/taylor_robot/share/ament_index/resource_index/parent_prefix_path/taylor_robot
+[1.108s] -- Installing: /home/instaufpr/taylor_ws/src/install/taylor_robot/share/taylor_robot/environment/ament_prefix_path.sh
+[1.109s] -- Installing: /home/instaufpr/taylor_ws/src/install/taylor_robot/share/taylor_robot/environment/ament_prefix_path.dsv
+[1.109s] -- Installing: /home/instaufpr/taylor_ws/src/install/taylor_robot/share/taylor_robot/environment/path.sh
+[1.109s] -- Installing: /home/instaufpr/taylor_ws/src/install/taylor_robot/share/taylor_robot/environment/path.dsv
+[1.109s] -- Installing: /home/instaufpr/taylor_ws/src/install/taylor_robot/share/taylor_robot/local_setup.bash
+[1.109s] -- Installing: /home/instaufpr/taylor_ws/src/install/taylor_robot/share/taylor_robot/local_setup.sh
+[1.109s] -- Installing: /home/instaufpr/taylor_ws/src/install/taylor_robot/share/taylor_robot/local_setup.zsh
+[1.110s] -- Installing: /home/instaufpr/taylor_ws/src/install/taylor_robot/share/taylor_robot/local_setup.dsv
+[1.110s] -- Installing: /home/instaufpr/taylor_ws/src/install/taylor_robot/share/taylor_robot/package.dsv
+[1.110s] -- Installing: /home/instaufpr/taylor_ws/src/install/taylor_robot/share/ament_index/resource_index/packages/taylor_robot
+[1.110s] -- Installing: /home/instaufpr/taylor_ws/src/install/taylor_robot/share/taylor_robot/cmake/taylor_robotConfig.cmake
+[1.110s] -- Installing: /home/instaufpr/taylor_ws/src/install/taylor_robot/share/taylor_robot/cmake/taylor_robotConfig-version.cmake
+[1.110s] -- Installing: /home/instaufpr/taylor_ws/src/install/taylor_robot/share/taylor_robot/package.xml
+[1.114s] Invoked command in '/home/instaufpr/taylor_ws/src/build/taylor_robot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/instaufpr/udemy_ros2/install/turtlesim_catch_them_all:/home/instaufpr/udemy_ros2/install/my_py_pkg:/home/instaufpr/nav2_ws/install/nav2_gazebo_spawner:/opt/ros/foxy /usr/bin/cmake --install /home/instaufpr/taylor_ws/src/build/taylor_robot

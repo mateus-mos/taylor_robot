@@ -1,0 +1,52 @@
+[0.024s] Invoking command in '/home/instaufpr/taylor_ws/src/build/ros2_mapping': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/instaufpr/udemy_ros2/install/turtlesim_catch_them_all:/home/instaufpr/udemy_ros2/install/my_py_pkg:/home/instaufpr/nav2_ws/install/nav2_gazebo_spawner:/opt/ros/foxy /usr/bin/cmake /home/instaufpr/taylor_ws/src/ros2_mapping -DCMAKE_INSTALL_PREFIX=/home/instaufpr/taylor_ws/src/install/ros2_mapping
+[0.143s] -- The C compiler identification is GNU 9.4.0
+[0.272s] -- The CXX compiler identification is GNU 9.4.0
+[0.280s] -- Check for working C compiler: /usr/bin/cc
+[0.352s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.354s] -- Detecting C compiler ABI info
+[0.434s] -- Detecting C compiler ABI info - done
+[0.457s] -- Detecting C compile features
+[0.458s] -- Detecting C compile features - done
+[0.462s] -- Check for working CXX compiler: /usr/bin/c++
+[0.550s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.551s] -- Detecting CXX compiler ABI info
+[0.642s] -- Detecting CXX compiler ABI info - done
+[0.653s] -- Detecting CXX compile features
+[0.654s] -- Detecting CXX compile features - done
+[0.658s] -- Found ament_cmake: 0.9.9 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.696s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.696s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.936s] -- Found ament_lint_auto: 0.9.6 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[1.037s] -- Added test 'copyright' to check source files copyright and LICENSE
+[1.039s] -- Added test 'flake8' to check Python code syntax and style conventions
+[1.040s] -- Added test 'lint_cmake' to check CMake code style
+[1.041s] -- Added test 'pep257' to check Python code against some of the style conventions in PEP 257
+[1.043s] -- Added test 'xmllint' to check XML markup files
+[1.045s] -- Configuring done
+[1.047s] -- Generating done
+[1.048s] -- Build files have been written to: /home/instaufpr/taylor_ws/src/build/ros2_mapping
+[1.051s] Invoked command in '/home/instaufpr/taylor_ws/src/build/ros2_mapping' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/instaufpr/udemy_ros2/install/turtlesim_catch_them_all:/home/instaufpr/udemy_ros2/install/my_py_pkg:/home/instaufpr/nav2_ws/install/nav2_gazebo_spawner:/opt/ros/foxy /usr/bin/cmake /home/instaufpr/taylor_ws/src/ros2_mapping -DCMAKE_INSTALL_PREFIX=/home/instaufpr/taylor_ws/src/install/ros2_mapping
+[1.053s] Invoking command in '/home/instaufpr/taylor_ws/src/build/ros2_mapping': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/instaufpr/udemy_ros2/install/turtlesim_catch_them_all:/home/instaufpr/udemy_ros2/install/my_py_pkg:/home/instaufpr/nav2_ws/install/nav2_gazebo_spawner:/opt/ros/foxy /usr/bin/cmake --build /home/instaufpr/taylor_ws/src/build/ros2_mapping -- -j8 -l8
+[1.099s] Invoked command in '/home/instaufpr/taylor_ws/src/build/ros2_mapping' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/instaufpr/udemy_ros2/install/turtlesim_catch_them_all:/home/instaufpr/udemy_ros2/install/my_py_pkg:/home/instaufpr/nav2_ws/install/nav2_gazebo_spawner:/opt/ros/foxy /usr/bin/cmake --build /home/instaufpr/taylor_ws/src/build/ros2_mapping -- -j8 -l8
+[1.142s] Invoking command in '/home/instaufpr/taylor_ws/src/build/ros2_mapping': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/instaufpr/udemy_ros2/install/turtlesim_catch_them_all:/home/instaufpr/udemy_ros2/install/my_py_pkg:/home/instaufpr/nav2_ws/install/nav2_gazebo_spawner:/opt/ros/foxy /usr/bin/cmake --install /home/instaufpr/taylor_ws/src/build/ros2_mapping
+[1.151s] -- Install configuration: ""
+[1.151s] -- Installing: /home/instaufpr/taylor_ws/src/install/ros2_mapping/share/ros2_mapping/launch
+[1.152s] -- Installing: /home/instaufpr/taylor_ws/src/install/ros2_mapping/share/ros2_mapping/launch/online_async_launch.py
+[1.152s] -- Installing: /home/instaufpr/taylor_ws/src/install/ros2_mapping/share/ros2_mapping/config
+[1.152s] -- Installing: /home/instaufpr/taylor_ws/src/install/ros2_mapping/share/ros2_mapping/config/mapper_params_online_async.yaml
+[1.152s] -- Installing: /home/instaufpr/taylor_ws/src/install/ros2_mapping/share/ament_index/resource_index/package_run_dependencies/ros2_mapping
+[1.152s] -- Installing: /home/instaufpr/taylor_ws/src/install/ros2_mapping/share/ament_index/resource_index/parent_prefix_path/ros2_mapping
+[1.152s] -- Installing: /home/instaufpr/taylor_ws/src/install/ros2_mapping/share/ros2_mapping/environment/ament_prefix_path.sh
+[1.152s] -- Installing: /home/instaufpr/taylor_ws/src/install/ros2_mapping/share/ros2_mapping/environment/ament_prefix_path.dsv
+[1.152s] -- Installing: /home/instaufpr/taylor_ws/src/install/ros2_mapping/share/ros2_mapping/environment/path.sh
+[1.153s] -- Installing: /home/instaufpr/taylor_ws/src/install/ros2_mapping/share/ros2_mapping/environment/path.dsv
+[1.153s] -- Installing: /home/instaufpr/taylor_ws/src/install/ros2_mapping/share/ros2_mapping/local_setup.bash
+[1.153s] -- Installing: /home/instaufpr/taylor_ws/src/install/ros2_mapping/share/ros2_mapping/local_setup.sh
+[1.153s] -- Installing: /home/instaufpr/taylor_ws/src/install/ros2_mapping/share/ros2_mapping/local_setup.zsh
+[1.153s] -- Installing: /home/instaufpr/taylor_ws/src/install/ros2_mapping/share/ros2_mapping/local_setup.dsv
+[1.153s] -- Installing: /home/instaufpr/taylor_ws/src/install/ros2_mapping/share/ros2_mapping/package.dsv
+[1.153s] -- Installing: /home/instaufpr/taylor_ws/src/install/ros2_mapping/share/ament_index/resource_index/packages/ros2_mapping
+[1.153s] -- Installing: /home/instaufpr/taylor_ws/src/install/ros2_mapping/share/ros2_mapping/cmake/ros2_mappingConfig.cmake
+[1.153s] -- Installing: /home/instaufpr/taylor_ws/src/install/ros2_mapping/share/ros2_mapping/cmake/ros2_mappingConfig-version.cmake
+[1.153s] -- Installing: /home/instaufpr/taylor_ws/src/install/ros2_mapping/share/ros2_mapping/package.xml
+[1.156s] Invoked command in '/home/instaufpr/taylor_ws/src/build/ros2_mapping' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/instaufpr/udemy_ros2/install/turtlesim_catch_them_all:/home/instaufpr/udemy_ros2/install/my_py_pkg:/home/instaufpr/nav2_ws/install/nav2_gazebo_spawner:/opt/ros/foxy /usr/bin/cmake --install /home/instaufpr/taylor_ws/src/build/ros2_mapping
