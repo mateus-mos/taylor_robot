@@ -17,7 +17,7 @@ import xacro
 
 def generate_launch_description():
 
-    # Set the path to different files and folders.
+    #Set the path to different files and folders.
     pkg_gazebo_ros = FindPackageShare(package='gazebo_ros').find('gazebo_ros')  
     #pkg_share = FindPackageShare(package='taylor_robot').find('taylor_robot')
     pkg_share = os.path.join(get_package_share_directory('taylor_robot'))
@@ -28,8 +28,8 @@ def generate_launch_description():
 
     #default_model_path = os.path.join(pkg_share, 'urdf/taylor.robot.urdf.xacro')
 
-    #robot_localization_file_path = os.path.join(pkg_share, 'config/ekf.yaml') 
-    #robot_name_in_urdf = 'taylor_robot'
+    robot_localization_file_path = os.path.join(pkg_share, 'config/ekf.yaml') 
+    #   robot_name_in_urdf = 'taylor_robot'
     default_rviz_config_path = os.path.join(pkg_share,'rviz2', 'taylor_rviz2_config.rviz')
 
     world_description_package='lab_usig_world_description'
@@ -45,7 +45,7 @@ def generate_launch_description():
     nav2_bt_path = FindPackageShare(package='nav2_bt_navigator').find('nav2_bt_navigator')
     behavior_tree_xml_path = os.path.join(nav2_bt_path, 'behavior_trees', 'navigate_w_replanning_and_recovery.xml')
     
-    # Launch configuration variables specific to simulation
+    #Launch configuration variables specific to simulation
 
     autostart = LaunchConfiguration('autostart')
     default_bt_xml_filename = LaunchConfiguration('default_bt_xml_filename')
@@ -66,7 +66,7 @@ def generate_launch_description():
     #remappings = [('/tf', 'tf'),
                     #('/tf_static', 'tf_static')]
     
-    # Declare the launch arguments  
+    #Declare the launch arguments  
 
     declare_namespace_cmd = DeclareLaunchArgument(
         name='namespace',
@@ -157,15 +157,15 @@ def generate_launch_description():
         #condition=IfCondition(PythonExpression([use_simulator, ' and not ', headless])))
 
     #Start robot localization using an Extended Kalman filter
-    #start_robot_localization_cmd = Node(
-    # package='robot_localization',
-        #executable='ekf_node',
-        #name='ekf_filter_node',
-        #output='screen',
-        #parameters=[robot_localization_file_path, 
-        #{'use_sim_time': use_sim_time}])
+    start_robot_localization_cmd = Node(
+    package='robot_localization',
+        executable='ekf_node',
+        name='ekf_filter_node',
+        output='screen',
+        parameters=[robot_localization_file_path, 
+        {'use_sim_time': use_sim_time}])
 
-    # Subscribe to the joint states of the robot, and publish the 3D pose of each link.
+    #Subscribe to the joint states of the robot, and publish the 3D pose of each link.
     start_robot_state_publisher_cmd = Node(
         condition=IfCondition(use_robot_state_pub),
         package='robot_state_publisher',
@@ -188,16 +188,26 @@ def generate_launch_description():
                         output='screen'
                         )
 
-    # Launch RViz
+    #Launch RViz
     start_rviz_cmd = Node(
         condition=IfCondition(use_rviz),
         package='rviz2',
         executable='rviz2',
         name='rviz2',
         output='screen',
-        arguments=['-d', rviz_config_file])    
+        arguments=['-d', rviz_config_file])   
 
-    # Launch the ROS 2 Navigation Stack
+    #Launch map server
+    start_map_server = Node(
+            package='nav2_map_server',
+            executable='map_server',
+            name='map_server',
+            output='screen',
+            parameters=[{'use_sim_time': True},
+                        {'yaml_filename': map_yaml_file}
+                        ])
+
+    #Launch the ROS 2 Navigation Stack
     start_ros2_navigation_cmd = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(os.path.join(nav2_launch_dir, 'bringup_launch.py')),
         launch_arguments = {'namespace': namespace,
@@ -209,10 +219,20 @@ def generate_launch_description():
                             'default_bt_xml_filename': default_bt_xml_filename,
                             'autostart': autostart}.items())
 
-    # Create the launch description and populate
+    #Launch Lifecycle manager nav2 node
+    start_lifecycle_manager_nav2 = Node(
+            package='nav2_lifecycle_manager',
+            executable='lifecycle_manager',
+            name='lifecycle_manager_mapper',
+            output='screen',
+            parameters=[{'use_sim_time': True},
+                        {'autostart': True},
+                         {'node_names': ['map_server']}])
+
+    #Create the launch description and populate
     ld = LaunchDescription()
 
-    # Declare the launch options
+    #Declare the launch options
     ld.add_action(declare_namespace_cmd)
     ld.add_action(declare_use_namespace_cmd)
     ld.add_action(declare_autostart_cmd)
@@ -223,8 +243,8 @@ def generate_launch_description():
     ld.add_action(declare_rviz_config_file_cmd)
     ld.add_action(declare_simulator_cmd)
     ld.add_action(declare_slam_cmd)
-    ld.add_action(declare_use_robot_state_pub_cmd)  
-    ld.add_action(declare_use_rviz_cmd) 
+    ld.add_action(declare_use_robot_state_pub_cmd)
+    ld.add_action(declare_use_rviz_cmd)
     ld.add_action(declare_use_sim_time_cmd)
     ld.add_action(declare_use_simulator_cmd)
     ld.add_action(declare_world_cmd)
@@ -232,11 +252,13 @@ def generate_launch_description():
     # Add any actions
     #ld.add_action(start_gazebo_server_cmd)
     #ld.add_action(start_gazebo_client_cmd)
-    #ld.add_action(start_robot_localization_cmd)
+    ld.add_action(start_robot_localization_cmd)
     ld.add_action(start_robot_state_publisher_cmd)
     ld.add_action(start_gazebo_cmd)
     ld.add_action(spawn_entity)
     ld.add_action(start_rviz_cmd)
+    ld.add_action(start_map_server)
+    ld.add_action(start_lifecycle_manager_nav2)
     ld.add_action(start_ros2_navigation_cmd)
 
     return ld
