@@ -32,6 +32,9 @@ def generate_launch_description():
     #   robot_name_in_urdf = 'taylor_robot'
     default_rviz_config_path = os.path.join(pkg_share,'rviz2', 'taylor_rviz2_config.rviz')
 
+    amcl_config_path = os.path.join(get_package_share_directory(
+        'taylor_robot'), 'config', 'taylor_amcl_config_file.yaml')
+
     world_description_package='lab_usig_world_description'
     world_name='lab_25'
     world_path = PathJoinSubstitution(
@@ -107,7 +110,7 @@ def generate_launch_description():
         name='rviz_config_file',
         default_value=default_rviz_config_path,
         description='Full path to the RVIZ config file to use')
-
+    
     declare_simulator_cmd = DeclareLaunchArgument(
         name='headless',
         default_value='False',
@@ -184,7 +187,9 @@ def generate_launch_description():
     #Spawn entity
     spawn_entity = Node(package='gazebo_ros', 
                         executable='spawn_entity.py',
-                        arguments=['-topic', 'robot_description','-entity', 'taylor_robot','-x','12','-y','10'],
+                        arguments=['-topic', 'robot_description','-entity', 'taylor_robot',
+                        '-x','12',
+                        '-y','10'],
                         output='screen'
                         )
 
@@ -228,6 +233,15 @@ def generate_launch_description():
             parameters=[{'use_sim_time': True},
                         {'autostart': True},
                          {'node_names': ['map_server']}])
+    #Launch AMCL node
+    start_amcl_nav2 = Node(
+            package='nav2_amcl',
+            executable='amcl',
+            name='amcl',
+            output='screen',
+            parameters=[amcl_config_path]
+        )
+    
 
     #Create the launch description and populate
     ld = LaunchDescription()
@@ -260,5 +274,6 @@ def generate_launch_description():
     ld.add_action(start_map_server)
     ld.add_action(start_lifecycle_manager_nav2)
     ld.add_action(start_ros2_navigation_cmd)
+    #ld.add_action(start_amcl_nav2)
 
     return ld
