@@ -37,7 +37,7 @@ amcl:
     z_max: 0.05
     z_rand: 0.5
     z_short: 0.05
-set_initial_pose: true
+    set_initial_pose: true
     initial_pose:
       x: 12.0
       y: 10.0

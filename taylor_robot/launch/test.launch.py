@@ -14,6 +14,7 @@ from launch_ros.actions import Node
 from launch_ros.substitutions import FindPackageShare
 from ament_index_python.packages import get_package_share_directory
 import xacro
+from launch.substitutions import ThisLaunchFileDir
 
 def generate_launch_description():
 
@@ -44,6 +45,8 @@ def generate_launch_description():
     nav2_dir = FindPackageShare(package='nav2_bringup').find('nav2_bringup') 
     nav2_launch_dir = os.path.join(nav2_dir, 'launch') 
     static_map_path = os.path.join(pkg_share, 'rviz2_map', 'lab_usig_map_rviz2.yaml')
+    map_file = os.path.join(get_package_share_directory(
+        'taylor_robot'), 'rviz2_map', 'lab_usig_map_rviz2.yaml')
     #nav2_params_path = os.path.join(pkg_share, 'params', 'nav2_params.yaml')
     nav2_bt_path = FindPackageShare(package='nav2_bt_navigator').find('nav2_bt_navigator')
     behavior_tree_xml_path = os.path.join(nav2_bt_path, 'behavior_trees', 'navigate_w_replanning_and_recovery.xml')
@@ -118,7 +121,7 @@ def generate_launch_description():
 
     declare_slam_cmd = DeclareLaunchArgument(
         name='slam',
-        default_value='True',
+        default_value='False',
         description='Whether to run SLAM')
         
     declare_use_robot_state_pub_cmd = DeclareLaunchArgument(
@@ -203,14 +206,14 @@ def generate_launch_description():
         arguments=['-d', rviz_config_file])   
 
     #Launch map server
-    start_map_server = Node(
+    start_map_server =         Node(
             package='nav2_map_server',
             executable='map_server',
             name='map_server',
             output='screen',
             parameters=[{'use_sim_time': True},
-                        {'yaml_filename': map_yaml_file}
-                        ])
+                        {'yaml_filename': map_file}]
+        )
 
     #Launch the ROS 2 Navigation Stack
     start_ros2_navigation_cmd = IncludeLaunchDescription(
@@ -228,12 +231,14 @@ def generate_launch_description():
     start_lifecycle_manager_nav2 = Node(
             package='nav2_lifecycle_manager',
             executable='lifecycle_manager',
-            name='lifecycle_manager_mapper',
+            name='lifecycle_manager_localization',
             output='screen',
             parameters=[{'use_sim_time': True},
                         {'autostart': True},
-                         {'node_names': ['map_server']}])
+                        {'node_names': ['map_server', 'amcl']}]
+        )
     #Launch AMCL node
+    
     start_amcl_nav2 = Node(
             package='nav2_amcl',
             executable='amcl',
@@ -242,7 +247,6 @@ def generate_launch_description():
             parameters=[amcl_config_path]
         )
     
-
     #Create the launch description and populate
     ld = LaunchDescription()
 
@@ -274,6 +278,6 @@ def generate_launch_description():
     ld.add_action(start_map_server)
     ld.add_action(start_lifecycle_manager_nav2)
     ld.add_action(start_ros2_navigation_cmd)
-    #ld.add_action(start_amcl_nav2)
+    ld.add_action(start_amcl_nav2)
 
     return ld
