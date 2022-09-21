@@ -37,7 +37,7 @@ def generate_launch_description():
         'taylor_robot'), 'config', 'taylor_amcl_config_file.yaml')
 
     world_description_package='lab_usig_world_description'
-    world_name='lab_25'
+    world_name='lab_28'
     world_path = PathJoinSubstitution(
                 [FindPackageShare(world_description_package), "worlds", world_name]
             )
