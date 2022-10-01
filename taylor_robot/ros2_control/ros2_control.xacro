@@ -1,5 +1,7 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+
     <ros2_control name="GazeboSystem" type="system">
         <hardware>
             <plugin>gazebo_ros2_control/GazeboSystem</plugin>
@@ -24,7 +26,7 @@
 
     <gazebo>
         <plugin name="gazebo_ros2_control" filename="libgazebo_ros2_control.so">
-            <parameters>$(find taylor_robot)/config/my_controller.yaml</parameters>
+            <parameters>$(find taylor_robot)/config/my_controllers.yaml</parameters>
         </plugin>
     </gazebo>
 
