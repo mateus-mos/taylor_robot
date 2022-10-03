@@ -275,9 +275,9 @@ def generate_launch_description():
     ld.add_action(start_gazebo_cmd)
     ld.add_action(spawn_entity)
     ld.add_action(start_rviz_cmd)
-    ld.add_action(start_map_server)
-    ld.add_action(start_lifecycle_manager_nav2)
+    #ld.add_action(start_map_server)
+    #ld.add_action(start_lifecycle_manager_nav2)
     ld.add_action(start_ros2_navigation_cmd)
-    ld.add_action(start_amcl_nav2)
+    #ld.add_action(start_amcl_nav2)
 
     return ld
