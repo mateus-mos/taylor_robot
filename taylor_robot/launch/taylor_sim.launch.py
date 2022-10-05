@@ -58,6 +58,18 @@ def generate_launch_description():
     #            output='screen')
 
 
+    diff_drive_spawner = Node(
+        package="controller_manager",
+        executable="spawner.py",
+        arguments=["diff_cont"],
+    )
+
+    joint_broad_spawner = Node(
+        package="controller_manager",
+        executable="spawner.py",
+        arguments=["joint_broad"],
+    )
+
     # Launch them all!
     return LaunchDescription([
         rsp,
@@ -65,5 +77,7 @@ def generate_launch_description():
             cmd=['gazebo', '--verbose',  '-s', 'libgazebo_ros_init.so', '-s', 'libgazebo_ros_factory.so', '-w', world_path], 
             output='screen'),
         spawn_entity,
+        diff_drive_spawner,
+        joint_broad_spawner,
         #rviz
     ])

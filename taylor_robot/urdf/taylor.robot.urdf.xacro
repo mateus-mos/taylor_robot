@@ -7,7 +7,8 @@
   <xacro:include filename="$(find taylor_robot)/gazebo/taylor.materials.xacro"/>
 
   <xacro:include filename="$(find taylor_robot)/urdf/taylor.robot.core.xacro"/>
-  <xacro:include filename="$(find taylor_robot)/gazebo/gazebo_control.xacro"/>
+  <!-- <xacro:include filename="$(find taylor_robot)/gazebo/gazebo_control.xacro"/> -->
+  <xacro:include filename="$(find taylor_robot)/ros2_control/ros2_control.xacro"/>
   <xacro:include filename="$(find taylor_robot)/urdf/taylor.lidar.xacro"/>
 
   
