@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="taylor_robot">
 
-  <xacro:arg name="prefix" default=""/>
 
   <xacro:include filename="$(find taylor_robot)/gazebo/taylor.gazebo.xacro"/>
   <xacro:include filename="$(find taylor_robot)/gazebo/taylor.materials.xacro"/>
@@ -9,7 +8,7 @@
   <xacro:include filename="$(find taylor_robot)/urdf/taylor.robot.core.xacro"/>
   <xacro:include filename="$(find taylor_robot)/urdf/taylor.lidar.xacro"/>
   <!-- <xacro:include filename="$(find taylor_robot)/gazebo/gazebo_control.xacro"/> -->
-  <xacro:include filename="$(find taylor_robot)/ros2_control/ros2_control.xacro"/>/
+  <xacro:include filename="$(find taylor_robot)/ros2_control/ros2_control.xacro"/>
 
 
   
@@ -18,7 +17,6 @@
 
   
 
-  <xacro:taylor prefix="$(arg prefix)"/>
-
+  
 
 </robot>
