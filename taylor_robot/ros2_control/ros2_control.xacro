@@ -27,6 +27,7 @@
     <gazebo>
         <plugin name="gazebo_ros2_control" filename="libgazebo_ros2_control.so">
             <parameters>$(find taylor_robot)/config/my_controllers.yaml</parameters>
+            <parameters>$(find taylor_robot)/config/gaz_ros2_ctl_use_sim.yaml</parameters>
         </plugin>
     </gazebo>
 
