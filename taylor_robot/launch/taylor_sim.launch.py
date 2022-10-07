@@ -1,4 +1,5 @@
 import os
+import re
 from sys import prefix
 
 from ament_index_python.packages import get_package_share_directory
@@ -26,6 +27,9 @@ def generate_launch_description():
     world_path = PathJoinSubstitution(
         [FindPackageShare(world_description_package), "worlds", world_name]
     )
+
+    #remappings
+    remappings = [('/diff_cont/cmd_vel_unstamped', 'cmd_vel')]
 
     #rviz_config_path = PathJoinSubstitution(
     #    [FindPackageShare(package_name), "rviz", "my_bot.rviz"]
@@ -57,17 +61,21 @@ def generate_launch_description():
     #            arguments=['-d', rviz_config_path],
     #            output='screen')
 
+    #remappings = [('/diff_cont/cmd_vel_unstamped', '/cmd_vel')]
 
     diff_drive_spawner = Node(
         package="controller_manager",
-        executable="spawner.py",
-        arguments=["diff_cont"],
+        executable="spawner.py",      
+        #remappings=[('/diff_cont/cmd_vel_unstamped', '/cmd_vel')],
+        arguments=["diff_cont"]
     )
+
 
     joint_broad_spawner = Node(
         package="controller_manager",
         executable="spawner.py",
-        arguments=["joint_broad"],
+        arguments=["joint_broad"]
+
     )
 
     # Launch them all!

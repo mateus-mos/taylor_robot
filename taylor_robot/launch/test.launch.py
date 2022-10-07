@@ -69,7 +69,7 @@ def generate_launch_description():
     use_simulator = LaunchConfiguration('use_simulator')
     world = LaunchConfiguration('world')
     
-    #remappings = [('/tf', 'tf'),
+    #remappings = [('/cmd_vel', '/diff_cont/cmd_vel_unstamped')]
                     #('/tf_static', 'tf_static')]
     
     #Declare the launch arguments  
@@ -164,7 +164,7 @@ def generate_launch_description():
 
     #Start robot localization using an Extended Kalman filter
     start_robot_localization_cmd = Node(
-    package='robot_localization',
+        package='robot_localization',
         executable='ekf_node',
         name='ekf_filter_node',
         output='screen',
@@ -223,9 +223,11 @@ def generate_launch_description():
                             'slam': slam,
                             'map': map_yaml_file,
                             'use_sim_time': use_sim_time,
+                            #'remmapings': remappings,
                             #'params_file': params_file,
                             'default_bt_xml_filename': default_bt_xml_filename,
-                            'autostart': autostart}.items())
+                            'autostart': autostart}.items()
+                            )
 
     #Launch Lifecycle manager nav2 node
     start_lifecycle_manager_nav2 = Node(
