@@ -2,20 +2,23 @@
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="taylor_robot">
 
   <xacro:arg name="prefix" default=""/>
+  <xacro:arg name="use_ros2_control" default="true"/>
+  <xacro:arg name="sim_mode" default="false"/>
 
   <xacro:include filename="$(find taylor_robot)/gazebo/taylor.gazebo.xacro"/>
   <xacro:include filename="$(find taylor_robot)/gazebo/taylor.materials.xacro"/>
-
   <xacro:include filename="$(find taylor_robot)/urdf/taylor.robot.core.xacro"/>
-  <!-- <xacro:include filename="$(find taylor_robot)/gazebo/gazebo_control.xacro"/> -->
-  <xacro:include filename="$(find taylor_robot)/ros2_control/ros2_control.xacro"/>
+
+  <xacro:if value="$(arg use_ros2_control)">
+    <xacro:include filename="$(find taylor_robot)/ros2_control/ros2_control.xacro"/>
+  </xacro:if>
+
+  <xacro:unless value="$(arg use_ros2_control)">
+    <xacro:include filename="$(find taylor_robot)/gazebo/gazebo_control.xacro"/>
+  </xacro:unless>
+
   <xacro:include filename="$(find taylor_robot)/urdf/taylor.lidar.xacro"/>
 
-  
-  
-
-
-  
 
   <xacro:taylor prefix="$(arg prefix)"/>
 
