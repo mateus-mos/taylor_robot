@@ -12,8 +12,6 @@ from launch.event_handlers import OnProcessStart
 
 from launch_ros.actions import Node
 
-
-
 def generate_launch_description():
 
 
@@ -27,9 +25,6 @@ def generate_launch_description():
                     get_package_share_directory(package_name),'launch','taylor.launch.py'
                 )]), launch_arguments={'use_sim_time': 'false', 'use_ros2_control': 'true'}.items()
     )
-
-    
-
 
     robot_description = Command(['ros2 param get --hide-type /robot_state_publisher robot_description'])
 
@@ -70,7 +65,6 @@ def generate_launch_description():
         )
     )
 
-
     # Code for delaying a node (I haven't tested how effective it is)
     # 
     # First add the below lines to imports
@@ -86,8 +80,6 @@ def generate_launch_description():
     # )
     #
     # Replace the diff_drive_spawner in the final return with delayed_diff_drive_spawner
-
-
 
     # Launch them all!
     return LaunchDescription([
