@@ -9,7 +9,7 @@ def generate_launch_description():
     nav2_yaml = os.path.join(get_package_share_directory(
         'taylor_robot'), 'config', 'taylor_amcl_config_file.yaml')
     map_file = os.path.join(get_package_share_directory(
-        'taylor_robot'), 'rviz2_map', 'lab_usig_map_rviz2.yaml')
+        'taylor_robot'), 'config', 'lab_usig_map_rviz2.yaml')
 
     return LaunchDescription([
         

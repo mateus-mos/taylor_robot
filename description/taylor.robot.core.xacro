@@ -42,7 +42,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="file://$(find taylor_robot)/meshes/chassis_link.STL" scale="1 1 1" />
+        <mesh filename="file://$(find taylor_robot)/description/meshes/chassis_link.STL" scale="1 1 1" />
       </geometry>
       <material name="red"/>
     </visual>
@@ -50,7 +50,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="file://$(find taylor_robot)/meshes/chassis_link.STL" scale="1 1 1" />
+        <mesh filename="file://$(find taylor_robot)/description/meshes/chassis_link.STL" scale="1 1 1" />
       </geometry>
     </collision> 
   </link>
@@ -75,7 +75,7 @@
         xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
-        <mesh filename="file://$(find taylor_robot)/meshes/right_wheel.STL" scale="1 1 1" />
+        <mesh filename="file://$(find taylor_robot)/description/meshes/right_wheel.STL" scale="1 1 1" />
       </geometry>
       <material name="black"/>
     </visual>
@@ -84,7 +84,7 @@
         xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
-        <mesh filename="file://$(find taylor_robot)/meshes/right_wheel.STL" scale="1 1 1" />
+        <mesh filename="file://$(find taylor_robot)/description/meshes/right_wheel.STL" scale="1 1 1" />
       </geometry>
     </collision>
   </link>
@@ -122,7 +122,7 @@
         xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
-        <mesh filename="file://$(find taylor_robot)/meshes/left_wheel.STL" scale="1 1 1" />
+        <mesh filename="file://$(find taylor_robot)/description/meshes/left_wheel.STL" scale="1 1 1" />
       </geometry>
       <material name="black"/>
     </visual>
@@ -131,7 +131,7 @@
         xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
-        <mesh filename="file://$(find taylor_robot)/meshes/left_wheel.STL" scale="1 1 1" />
+        <mesh filename="file://$(find taylor_robot)/description/meshes/left_wheel.STL" scale="1 1 1" />
       </geometry>
     </collision>
   </link>
@@ -169,7 +169,7 @@
         xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
-        <mesh filename="file://$(find taylor_robot)/meshes/caster_wheel.STL" scale="1 1 1" />
+        <mesh filename="file://$(find taylor_robot)/description/meshes/caster_wheel.STL" scale="1 1 1" />
       </geometry>
       <material name="black"/>
 
@@ -179,7 +179,7 @@
         xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
-        <mesh filename="file://$(find taylor_robot)/meshes/caster_wheel.STL" scale="1 1 1" />
+        <mesh filename="file://$(find taylor_robot)/description/meshes/caster_wheel.STL" scale="1 1 1" />
       </geometry>
     </collision>
   </link>
@@ -217,7 +217,7 @@
         xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
-        <mesh filename="file://$(find taylor_robot)/meshes/lidar.STL" scale="1 1 1" />
+        <mesh filename="file://$(find taylor_robot)/description/meshes/lidar.STL" scale="1 1 1" />
       </geometry>
       <material name="black"/>
     </visual>
@@ -226,7 +226,7 @@
         xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
-        <mesh filename="file://$(find taylor_robot)/meshes/lidar.STL" scale="1 1 1" />
+        <mesh filename="file://$(find taylor_robot)/description/meshes/lidar.STL" scale="1 1 1" />
       </geometry>
     </collision>
   </link>

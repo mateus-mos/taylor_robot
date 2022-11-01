@@ -15,9 +15,9 @@ def generate_launch_description():
     use_ros2_control = LaunchConfiguration('use_ros2_control')
     
     
-    # Process the URDF file
+    # Process the description file
     pkg_path = os.path.join(get_package_share_directory('taylor_robot'))
-    xacro_file = os.path.join(pkg_path, 'urdf', 'taylor.robot.urdf.xacro')
+    xacro_file = os.path.join(pkg_path, 'description', 'taylor.robot.description.xacro')
     robot_description_config = Command(['xacro ', xacro_file, ' use_ros2_control:=',
                                         use_ros2_control, ' sim_mode:=', use_sim_time])
 
