@@ -33,7 +33,7 @@ The [Nav2](https://navigation.ros.org/) package allows mobile robots to move saf
 
 This project seeks to provide the groundwork for a more enthusiastic robot—an autonomous mobile robot (AMR)—and to develop a functioning prototype of it. Even though Taylor is already an AMR, we still want more! In future Taylor versions, we'll construct an AMR that can be utilized in a manufacturing environment.
 
-Autonomous mobile robots (AMR) pick, transport, and sort things without human interaction in production and distribution operations. They are highly desired because of their numerous benefits, which include preventing product damage, lowering labor expenses, increasing productivity, and automating procedures. AMRs are already benefiting several industries, including transportation, logistics, automotive, and food.
+AMRs pick, transport, and sort things without human interaction in production and distribution operations. They are highly desired because of their numerous benefits, which include preventing product damage, lowering labor expenses, increasing productivity, and automating procedures. AMRs are already benefiting several industries, including transportation, logistics, automotive, and food.
 
 <img src="docs/images/amrs.jpg">
 
