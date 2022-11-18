@@ -27,7 +27,7 @@ The [Nav2](https://navigation.ros.org/) package allows mobile robots to move saf
   <img src="docs/images/nav2_taylor2.gif">
 </p>
 
-<p align="center" style="font-weight: bold">Nav2 simulation using Gazebo and Rviz</p>
+<p align="center" style="font-weight: bold; font-size: small">Nav2 simulation using Gazebo and Rviz</p>
 
 
 # How to setup
