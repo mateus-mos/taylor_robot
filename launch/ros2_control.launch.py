@@ -1,7 +1,4 @@
 import os
-import subprocess
-import time
-import rclpy
 
 from ament_index_python.packages import get_package_share_directory
 
@@ -15,23 +12,7 @@ from launch.event_handlers import OnProcessStart
 
 from launch_ros.actions import Node
 
-def check_robot_description():
-    rclpy.init()
-    # Check if the robot_description is up 
-
-    # Decode because the subproces.check_output return a bytes object
-    output = subprocess.check_output(["ros2", "topic", "list"]).decode("utf-8") 
-
-    while output.find("robot_description") == -1:
-        rclpy.logging.get_logger('Launch File').warn('Waiting for the robot_description node...')
-        output = subprocess.check_output(["ros2", "topic", "list"]).decode("utf-8") 
-        time.sleep(1.0)
-    
-    rclpy.logging.get_logger('Launch File').info('Robot_description node is up!')
-
 def generate_launch_description():
-
-    check_robot_description()
 
     package_name='taylor_robot' 
 

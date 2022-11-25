@@ -45,6 +45,15 @@ def generate_launch_description():
 
     wait_until_up(necessary_nodes)
 
+    package_name = 'taylor_robot'
+
+    ros2_control = IncludeLaunchDescription(
+                PythonLaunchDescriptionSource([os.path.join(
+                    get_package_share_directory(package_name),'launch','ros2_control.launch.py'
+                )]), launch_arguments={'use_sim_time': 'false',}.items()
+    )
+
     # Launch them all!
     return LaunchDescription([
+        ros2_control
     ])
