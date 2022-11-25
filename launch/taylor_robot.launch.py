@@ -25,7 +25,7 @@ def check_robot_description():
     while output.find("robot_description") == -1:
         rclpy.logging.get_logger('Launch File').warn('Waiting for the robot_description node...')
         output = subprocess.check_output(["ros2", "topic", "list"]).decode("utf-8") 
-        time.sleep(1.5)
+        time.sleep(1.0)
     
     rclpy.logging.get_logger('Launch File').info('Robot_description node is up!')
 
@@ -34,11 +34,6 @@ def generate_launch_description():
     check_robot_description()
 
     package_name='taylor_robot' 
-    rsp = IncludeLaunchDescription(
-                PythonLaunchDescriptionSource([os.path.join(
-                    get_package_share_directory(package_name),'launch','taylor.launch.py'
-                )]), launch_arguments={'use_sim_time': 'false', 'use_ros2_control': 'true'}.items()
-    )
 
     robot_description = Command(['ros2 param get --hide-type /robot_state_publisher robot_description'])
 
@@ -97,7 +92,6 @@ def generate_launch_description():
 
     # Launch them all!
     return LaunchDescription([
-        rsp,
         delayed_controller_manager,
         delayed_diff_drive_spawner,
         delayed_joint_broad_spawner
