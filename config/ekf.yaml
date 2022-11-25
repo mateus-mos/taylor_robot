@@ -32,16 +32,10 @@ ekf_filter_node:
         base_link_frame: base_link  # Defaults to "base_link" if unspecified
         world_frame: odom           # Defaults to the value of odom_frame if unspecified
         
-        odom0: demo/odom
+        # Encoder odometry published by the ros2_control package
+        odom0: nav_msgs/Odometry
         odom0_config: [true,  true,  true,
                        false, false, false,
                        false, false, false,
                        false, false, true,
                        false, false, false]
-
-        imu0: demo/imu
-        imu0_config: [false, false, false,
-                      true,  true,  true,
-                      false, false, false,
-                      false, false, false,
-                      false, false, false]
