@@ -69,14 +69,14 @@ def generate_launch_description():
     use_simulator = LaunchConfiguration('use_simulator')
     world = LaunchConfiguration('world')
     
-    remappings = [('/tf', 'tf'),
-                    ('/tf_static', 'tf_static')]
+    #remappings = [('/tf', 'tf'),
+                    #('/tf_static', 'tf_static')]
     
     #Declare the launch arguments  
 
     declare_namespace_cmd = DeclareLaunchArgument(
         name='namespace',
-        default_value='Taylor',
+        default_value='',
         description='Top-level namespace')
 
     declare_use_namespace_cmd = DeclareLaunchArgument(
@@ -179,7 +179,7 @@ def generate_launch_description():
         namespace=namespace,
         parameters=[{'robot_description': robot_description_config.toxml(),
         'use_sim_time': use_sim_time}],
-        remappings=remappings,
+        #remappings=remappings,
         arguments=[default_model_path])
 
     #Launch Gazebo
@@ -270,9 +270,8 @@ def generate_launch_description():
     # Add any actions
     #ld.add_action(start_gazebo_server_cmd)
     #ld.add_action(start_gazebo_client_cmd)
-    #ld.add_action(start_robot_localization_cmd)
-    ld.add_action(start_robot_state_publisher_cmd)
     ld.add_action(start_robot_localization_cmd)
+    ld.add_action(start_robot_state_publisher_cmd)
     ld.add_action(start_gazebo_cmd)
     ld.add_action(spawn_entity)
     ld.add_action(start_rviz_cmd)
