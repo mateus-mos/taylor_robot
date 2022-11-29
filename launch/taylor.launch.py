@@ -53,7 +53,7 @@ def generate_launch_description():
         DeclareLaunchArgument(
             'namespace',
             default_value='taylor',
-            description='Namespace to use'),
+            description='Namespace'),
 
         node_robot_state_publisher_with_namespace
     ])

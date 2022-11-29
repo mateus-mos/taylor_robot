@@ -4,19 +4,21 @@ from ament_index_python.packages import get_package_share_directory
 
 
 from launch import LaunchDescription
-from launch.actions import IncludeLaunchDescription, TimerAction
+from launch.actions import TimerAction, RegisterEventHandler, GroupAction, DeclareLaunchArgument, ExecuteProcess
 from launch.launch_description_sources import PythonLaunchDescriptionSource
-from launch.substitutions import Command
-from launch.actions import RegisterEventHandler
+from launch.substitutions import Command, LaunchConfiguration
 from launch.event_handlers import OnProcessStart
+from launch_ros.actions import PushRosNamespace
 
 from launch_ros.actions import Node
 
 def generate_launch_description():
 
+    namespace = LaunchConfiguration('namespace') 
+
     package_name='taylor_robot' 
 
-    robot_description = Command(['ros2 param get --hide-type /robot_state_publisher robot_description'])
+    robot_description = Command(['ros2 param get --hide-type ', namespace,'/robot_state_publisher /robot_description'])
 
     controller_params_file = os.path.join(get_package_share_directory(package_name),'config','my_controllers.yaml')
 
@@ -55,9 +57,23 @@ def generate_launch_description():
         )
     )
 
+    nodes_with_namespace = GroupAction(
+        actions=[
+            PushRosNamespace(namespace),
+            delayed_controller_manager,
+            delayed_diff_drive_spawner,
+            delayed_joint_broad_spawner
+        ]
+    )
+
+
     # Launch them all!
     return LaunchDescription([
-        delayed_controller_manager,
-        delayed_diff_drive_spawner,
-        delayed_joint_broad_spawner
+
+        DeclareLaunchArgument(
+            'namespace',
+            default_value='taylor',
+            description='Namespace'
+        ),
+        nodes_with_namespace
     ])
