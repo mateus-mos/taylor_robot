@@ -2,17 +2,16 @@ import os
 
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
+from launch.actions import GroupAction
 from launch.substitutions import LaunchConfiguration, Command
 from launch.actions import DeclareLaunchArgument
-from launch_ros.actions import Node
-import xacro
-
+from launch_ros.actions import Node, PushRosNamespace
 
 def generate_launch_description():
 
-    # Check if we're told to use sim time
     use_sim_time = LaunchConfiguration('use_sim_time')
     use_ros2_control = LaunchConfiguration('use_ros2_control')
+    namespace = LaunchConfiguration('namespace')
     
     
     # Process the description file
@@ -31,9 +30,16 @@ def generate_launch_description():
         parameters=[params]
     )
 
+    node_robot_state_publisher_with_namespace = GroupAction(
+        actions=[
+            PushRosNamespace(namespace),
+            node_robot_state_publisher,
+        ]
+    )
+
     # Launch!
     return LaunchDescription([
-        
+
         DeclareLaunchArgument(
             'use_sim_time',
             default_value='false',
@@ -44,5 +50,10 @@ def generate_launch_description():
             default_value='true',
             description='Use ros2_control if true'),
 
-        node_robot_state_publisher
+        DeclareLaunchArgument(
+            'namespace',
+            default_value='taylor',
+            description='Namespace to use'),
+
+        node_robot_state_publisher_with_namespace
     ])
