@@ -5,8 +5,6 @@
   <xacro:arg name="use_ros2_control" default="true"/>
   <xacro:arg name="sim_mode" default="false"/>
 
-  <xacro:include filename="$(find taylor_robot)/description/gazebo/taylor.gazebo.xacro"/>
-  <xacro:include filename="$(find taylor_robot)/description/gazebo/taylor.materials.xacro"/>
   <xacro:include filename="$(find taylor_robot)/description/taylor.robot.core.xacro"/>
 
   <xacro:if value="$(arg use_ros2_control)">
@@ -14,6 +12,8 @@
   </xacro:if>
 
   <xacro:unless value="$(arg use_ros2_control)">
+    <xacro:include filename="$(find taylor_robot)/description/gazebo/taylor.gazebo.xacro"/>
+    <xacro:include filename="$(find taylor_robot)/description/gazebo/taylor.materials.xacro"/>
     <xacro:include filename="$(find taylor_robot)/description/gazebo/gazebo_control.xacro"/>
   </xacro:unless>
 
