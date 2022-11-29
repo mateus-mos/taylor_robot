@@ -7,16 +7,22 @@ from launch import LaunchDescription
 from launch.actions import TimerAction, RegisterEventHandler, GroupAction, DeclareLaunchArgument, ExecuteProcess
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.substitutions import Command, LaunchConfiguration
-from launch.event_handlers import OnProcessStart
+from launch.event_handlers import OnProcessStart, OnExecutionComplete
 from launch_ros.actions import PushRosNamespace
+from launch.conditions import IfCondition, UnlessCondition
 
 from launch_ros.actions import Node
 
 def generate_launch_description():
+    package_name = 'taylor_robot' 
 
+    # Arguments 
+    namespace_arg = DeclareLaunchArgument('namespace')
+    sim_mode_arg = DeclareLaunchArgument('sim_mode', default_value='false')
+
+    # Arg vars
     namespace = LaunchConfiguration('namespace') 
-
-    package_name='taylor_robot' 
+    sim_mode = LaunchConfiguration('sim_mode')
 
     robot_description = Command(['ros2 param get --hide-type /', namespace,'/robot_state_publisher robot_description'])
 
@@ -25,8 +31,10 @@ def generate_launch_description():
     controller_manager = Node(
         package="controller_manager",
         executable="ros2_control_node",
-        parameters=[{'robot_description': robot_description},
-                    controller_params_file]
+        parameters=[
+            {'robot_description': robot_description},
+            controller_params_file
+        ]
     )
 
     delayed_controller_manager = TimerAction(period=3.0, actions=[controller_manager])
@@ -38,9 +46,9 @@ def generate_launch_description():
     )
 
     delayed_diff_drive_spawner = RegisterEventHandler(
-        event_handler=OnProcessStart(
+        OnExecutionComplete(
             target_action=controller_manager,
-            on_start=[diff_drive_spawner],
+            on_completion=[diff_drive_spawner],
         )
     )
 
@@ -51,9 +59,9 @@ def generate_launch_description():
     )
 
     delayed_joint_broad_spawner = RegisterEventHandler(
-        event_handler=OnProcessStart(
+        OnExecutionComplete(
             target_action=controller_manager,
-            on_start=[joint_broad_spawner],
+            on_completion=[joint_broad_spawner],
         )
     )
 
@@ -62,18 +70,14 @@ def generate_launch_description():
             PushRosNamespace(namespace),
             delayed_controller_manager,
             delayed_diff_drive_spawner,
-            delayed_joint_broad_spawner
+            delayed_joint_broad_spawner,
         ]
     )
 
 
     # Launch them all!
     return LaunchDescription([
-
-        DeclareLaunchArgument(
-            'namespace',
-            default_value='taylor',
-            description='Namespace'
-        ),
+        namespace_arg,
+        sim_mode_arg,
         nodes_with_namespace
     ])

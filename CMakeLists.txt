@@ -20,7 +20,7 @@ find_package(ament_cmake REQUIRED)
 find_package(ros2_control REQUIRED)
 find_package(robot_localization REQUIRED)
 find_package(nav2_core REQUIRED)
-find_package(gazebo_ros)
+find_package(gazebo_ros REQUIRED)
 
 install(
 	DIRECTORY config launch description 

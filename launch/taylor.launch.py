@@ -16,13 +16,20 @@ def generate_launch_description():
     
     # Process the description file
     pkg_path = os.path.join(get_package_share_directory('taylor_robot'))
-    xacro_file = os.path.join(pkg_path, 'description', 'taylor.robot.urdf.xacro')
-    robot_description_config = Command(['xacro ', xacro_file, ' use_ros2_control:=',
-                                        use_ros2_control, ' sim_mode:=', use_sim_time])
+    xacro_file_path = os.path.join(pkg_path, 'description', 'taylor.robot.urdf.xacro')
+
+    robot_description_config = Command(
+        [
+            'xacro ', xacro_file_path, 
+            ' use_ros2_control:=',use_ros2_control, 
+            ' use_sim_time:=', use_sim_time, 
+            ' namespace:=', namespace
+        ]
+    )
 
     
     # Create a robot_state_publisher node
-    params = {'robot_description': robot_description_config, 'use_sim_time': use_sim_time}
+    params = {'robot_description': robot_description_config}
     node_robot_state_publisher = Node(
         package='robot_state_publisher',
         executable='robot_state_publisher',
