@@ -19,8 +19,6 @@
 
   <xacro:include filename="$(find taylor_robot)/description/taylor.lidar.xacro"/>
 
-
   <xacro:taylor prefix="$(arg prefix)"/>
-
 
 </robot>
