@@ -3,8 +3,9 @@ import rclpy
 
 from ament_index_python.packages import get_package_share_directory
 
+from colorama import Fore
 from launch import LaunchDescription
-from launch.actions import DeclareLaunchArgument, ExecuteProcess, LogInfo, RegisterEventHandler, TimerAction
+from launch.actions import DeclareLaunchArgument, ExecuteProcess, LogInfo, TimerAction
 from launch.substitutions import LaunchConfiguration, Command, PathJoinSubstitution
 from launch.actions import IncludeLaunchDescription
 from launch.launch_description_sources import PythonLaunchDescriptionSource
@@ -15,45 +16,48 @@ from launch_ros.actions import Node
 from launch_ros.substitutions import FindPackageShare
 
 def generate_launch_description():
+    rclpy.init()
     package_name='taylor_robot' 
 
-    # see https://answers.gazebosim.org//question/2596/gazebo-being-moody-sometimes-starting-sometimes-not/
+    print(Fore.LIGHTYELLOW_EX + r"""
 
-    cool_path = os.path.join(get_package_share_directory(package_name), 'launch', 'cool_taylor.txt')
-    taylor_ascii = open(cool_path, 'r').read()
+▀█▀ ▄▀█ █▄█ █░░ █▀█ █▀█   █▀█ █▀█ █▄▄ █▀█ ▀█▀   █▀ █ █▀▄▀█ █░█ █░░ ▄▀█ ▀█▀ █ █▀█ █▄░█
+░█░ █▀█ ░█░ █▄▄ █▄█ █▀▄   █▀▄ █▄█ █▄█ █▄█ ░█░   ▄█ █ █░▀░█ █▄█ █▄▄ █▀█ ░█░ █ █▄█ █░▀█
+
+░░░░░░░▄█▄▄▄█▄
+▄▀░░░░▄▌─▄─▄─▐▄░░░░▀▄
+█▄▄█░░▀▌─▀─▀─▐▀░░█▄▄█
+░▐▌░░░░▀▀███▀▀░░░░▐▌
+████░▄█████████▄░████
+
+    """)
+    print(Fore.RESET)
+
+
+    # see https://answers.gazebosim.org//question/2596/gazebo-being-moody-sometimes-starting-sometimes-not/
 
     # Arguments
     debbug_mode_arg = DeclareLaunchArgument('debbug_mode', default_value='false')
     gazebo_world_file_arg = DeclareLaunchArgument('gazebo_world_file', default_value='lab_world.sdf')
     namespace_arg = DeclareLaunchArgument('namespace', default_value='taylor')
-    simulation_arg = DeclareLaunchArgument('simulation', default_value='false')
     use_ros2_control_arg = DeclareLaunchArgument('use_ros2_control', default_value='true')
 
     # Arg vars
     debbug_mode = LaunchConfiguration('debbug_mode')
     gazebo_world_file = LaunchConfiguration('gazebo_world_file')
     namespace = LaunchConfiguration('namespace')
-    simulation = LaunchConfiguration('simulation') 
     use_ros2_control = LaunchConfiguration('use_ros2_control')
 
-    # If launch with sim on
-        #launch gazebo 
-    # otherwise
-        # don't launch gazebo
-
-    # gazebo verbosity on/off
-    if debbug_mode:
-        gazebo_verbosity = '--verbose'
-    else:
-        gazebo_verbosity = ''
-
-    
+    rclpy.logging.get_logger('Launch').warn('Simulation mode! Remember to source the environment before launching Simulation mode!')
+    rclpy.logging.get_logger('Launch').warn('To avoid crashes reset daemon: ros2 daemon stop | ros2 daemon start See https://github.com/ros2/ros2cli/issues/582')  
+    # Kill old gazebo, if it's still running
+    os.system('killall -q gzserver gzclient')
 
     robot_description_node = IncludeLaunchDescription(
         PythonLaunchDescriptionSource([
             os.path.join(get_package_share_directory(package_name),'launch','taylor.launch.py')
         ]), 
-        launch_arguments={'use_sim_time': simulation, 'use_ros2_control': use_ros2_control, 'namespace': namespace}.items()
+        launch_arguments={'use_sim_time': 'true', 'use_ros2_control': use_ros2_control, 'namespace': namespace}.items()
     )
 
     # Gazebo
@@ -62,8 +66,7 @@ def generate_launch_description():
     )
 
     gazebo = ExecuteProcess( 
-        condition=IfCondition(simulation),
-        cmd=['gazebo', gazebo_verbosity,  '-s', 'libgazebo_ros_init.so', '-s', 'libgazebo_ros_factory.so', '-w', gazebo_world_path], 
+        cmd=['gazebo', '--verbose',  '-s', 'libgazebo_ros_init.so', '-s', 'libgazebo_ros_factory.so', '-w', gazebo_world_path], 
         output='screen'
     )
 
@@ -72,7 +75,7 @@ def generate_launch_description():
         PythonLaunchDescriptionSource([
             os.path.join(get_package_share_directory(package_name),'launch','ros2_control.launch.py')
         ]), 
-        launch_arguments={'namespace': namespace, 'sim_mode': simulation}.items()
+        launch_arguments={'namespace': namespace, 'sim_mode': 'true'}.items()
     )
 
     # Spawn robot
@@ -81,7 +84,6 @@ def generate_launch_description():
     robot_description_node_path = ['/',namespace, '/robot_description']
 
     spawn_entity = Node(
-        condition=IfCondition(simulation),
         package='gazebo_ros', 
         executable='spawn_entity.py',
         arguments=['-topic', robot_description_node_path,'-entity', 'taylor_robot','-x','12','-y','10', '-z', '2'],
@@ -105,12 +107,8 @@ def generate_launch_description():
     
     # Launch them all!
     return LaunchDescription([
-        LogInfo(
-            msg=taylor_ascii
-        ),
         namespace_arg,
         debbug_mode_arg,
-        simulation_arg,
         gazebo_world_file_arg,
         use_ros2_control_arg,
         robot_description_node,
