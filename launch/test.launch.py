@@ -59,7 +59,7 @@ def generate_launch_description():
 
     declare_namespace_cmd = DeclareLaunchArgument(
         name='namespace',
-        default_value='',
+        default_value='Taylor',
         description='Top-level namespace')
 
     declare_use_namespace_cmd = DeclareLaunchArgument(
@@ -149,11 +149,11 @@ def generate_launch_description():
 
     #Launch nav2_ros2_ctrl_interface node
 
-    nav2_ros2_ctrl_interface_cmd = Node(
-        package='nodes',
-        executable='nav2_ros2_ctrl_interface',
-        name='nav2_ros2_ctrl_interface',
-        output='screen') 
+    # nav2_ros2_ctrl_interface_cmd = Node(
+    #     package='nodes',
+    #     executable='nav2_ros2_ctrl_interface',
+    #     name='nav2_ros2_ctrl_interface',
+    #     output='screen') 
                         
 
     
@@ -179,7 +179,7 @@ def generate_launch_description():
     ld.add_action(start_robot_localization_cmd)
     ld.add_action(start_rviz_cmd)
     ld.add_action(start_ros2_navigation_cmd)
-    ld.add_action(nav2_ros2_ctrl_interface_cmd)
+    # ld.add_action(nav2_ros2_ctrl_interface_cmd)
 
 
     return ld

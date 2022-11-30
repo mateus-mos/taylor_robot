@@ -39,6 +39,12 @@ def generate_launch_description():
 
     controller_params_file = os.path.join(get_package_share_directory(package_name),'config','my_controllers.yaml')
 
+    lidar_launch = IncludeLaunchDescription(
+                PythonLaunchDescriptionSource([os.path.join(
+                    get_package_share_directory(package_name),'launch','rplidar.launch.py'
+                )])
+    )
+
     controller_manager = Node(
         package="controller_manager",
         executable="ros2_control_node",
@@ -92,6 +98,7 @@ def generate_launch_description():
 
     # Launch them all!
     return LaunchDescription([
+        lidar_launch,
         delayed_controller_manager,
         delayed_diff_drive_spawner,
         delayed_joint_broad_spawner
