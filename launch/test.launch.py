@@ -109,10 +109,10 @@ def generate_launch_description():
                     get_package_share_directory(package_name),'launch','taylor_sim.launch.py'
                 )]))
        
-    localization_server_cmd = IncludeLaunchDescription(
-                PythonLaunchDescriptionSource([os.path.join(
-                    get_package_share_directory(package_name),'launch','localization_server.launch.py'
-                )]))
+    # localization_server_cmd = IncludeLaunchDescription(
+    #             PythonLaunchDescriptionSource([os.path.join(
+    #                 get_package_share_directory(package_name),'launch','localization_server.launch.py'
+    #             )]))
 
     #Start robot localization using an Extended Kalman filter
     start_robot_localization_cmd = Node(
@@ -149,11 +149,11 @@ def generate_launch_description():
 
     #Launch nav2_ros2_ctrl_interface node
 
-    # nav2_ros2_ctrl_interface_cmd = Node(
-    #     package='nodes',
-    #     executable='nav2_ros2_ctrl_interface',
-    #     name='nav2_ros2_ctrl_interface',
-    #     output='screen') 
+    nav2_ros2_ctrl_interface_cmd = Node(
+        package='nodes',
+        executable='nav2_ros2_ctrl_interface',
+        name='nav2_ros2_ctrl_interface',
+        output='screen') 
                         
 
     
@@ -175,11 +175,11 @@ def generate_launch_description():
 
     # Add any actions
     ld.add_action(taylor_sim_launch_cmd)
-    ld.add_action(localization_server_cmd)
+    #ld.add_action(localization_server_cmd)
     ld.add_action(start_robot_localization_cmd)
     ld.add_action(start_rviz_cmd)
     ld.add_action(start_ros2_navigation_cmd)
-    # ld.add_action(nav2_ros2_ctrl_interface_cmd)
+    ld.add_action(nav2_ros2_ctrl_interface_cmd)
 
 
     return ld
