@@ -188,7 +188,7 @@
     type="fixed">
     <origin
       xyz="0.17 0 -0.009"
-      rpy="1.5708 0 -0.16473" />
+      rpy="1.5708 0 0" />
     <parent
       link="base_link" />
     <child
@@ -235,7 +235,7 @@
     type="fixed">
     <origin
       xyz="0.034828 0 0.0936"
-      rpy="1.5708 0 0" />
+      rpy="-1.5708 0 0" />
     <parent
       link="base_link" />
     <child
