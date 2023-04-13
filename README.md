@@ -36,5 +36,3 @@ This project seeks to provide the groundwork for a more enthusiastic robot—an 
 AMRs pick, transport, and sort things without human interaction in production and distribution operations. They are highly desired because of their numerous benefits, which include preventing product damage, lowering labor expenses, increasing productivity, and automating procedures. AMRs are already benefiting several industries, including transportation, logistics, automotive, and food.
 
 <img src="docs/images/amrs.jpg">
-
-# How to setup
