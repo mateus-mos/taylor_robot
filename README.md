@@ -16,7 +16,7 @@
 
 It is the **Raspberry Pi B+** that runs the controllers, which compares the reference value with the measurement output from the encoders and calculates the system's input based on this error (for more details, visit [Control Theory](https://en.wikipedia.org/wiki/Control_theory)).
 
-# Nav2 <img src="https://aws1.discourse-cdn.com/business7/uploads/ros/original/2X/7/781fa8ce870432b9682a95f855b315c454da87c7.png" width="25" height="45"/>
+# Nav2
 
 The [Nav2](https://navigation.ros.org/) package allows mobile robots to move safely from one location to another. Using sensors, this package performs mapping, localization, and perception functions. In addition to collecting information about the environment, these sensors can be used to build and maintain a map of the environment, to pinpoint the robot on the map, and to avoid obstacles that may be encountered in that environment.
 
